@@ -68,6 +68,7 @@
     <Content Include="Modelo.aspx" />
     <Content Include="images\GMQA.png" />
     <Content Include="images\modelo.png" />
+    <Content Include="Teste\HtmlPage1.html" />
     <Content Include="Trabalhos.aspx" />
     <Content Include="Pmme.aspx" />
     <Content Include="Styles\Site.css" />
