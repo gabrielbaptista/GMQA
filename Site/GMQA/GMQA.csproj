@@ -23,6 +23,11 @@
     </FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
     <UpgradeBackupLocation />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,6 +73,7 @@
     <Content Include="Modelo.aspx" />
     <Content Include="images\GMQA.png" />
     <Content Include="images\modelo.png" />
+    <Content Include="Teste\HtmlPage1.html" />
     <Content Include="Trabalhos.aspx" />
     <Content Include="Pmme.aspx" />
     <Content Include="Styles\Site.css" />
