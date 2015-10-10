@@ -1,0 +1,19 @@
+[03/10/2015 10:48:51] Gabriel Lara Baptista: Estou olhando, tem alguns ajustes a serem feitos no diagrama
+[03/10/2015 10:49:05] Gabriel Lara Baptista: 1. Não vi a necessidade de termos a entidade Programa
+[03/10/2015 10:49:41] Gabriel Lara Baptista: 2. Separar a entidade e métricas em duas
+[03/10/2015 10:49:46] Gabriel Lara Baptista: uma para Artefato
+[03/10/2015 10:49:50] Gabriel Lara Baptista: outra para métricas
+[03/10/2015 10:50:11] leonardo oliveira: tinha pensado em fazer isso
+[03/10/2015 10:50:23] Gabriel Lara Baptista: Teremos que ter entidades para
+[03/10/2015 10:50:30] Gabriel Lara Baptista: Tipos de Artefatos
+[03/10/2015 10:50:32] Gabriel Lara Baptista: Tipos de Métricas
+[03/10/2015 10:51:04] Gabriel Lara Baptista: Categorias de Risco
+[03/10/2015 10:51:35] Gabriel Lara Baptista: Estado do Risco
+[03/10/2015 10:51:59] Gabriel Lara Baptista: Vocês poderiam ajustar isso e já começarem a escrever o banco de dados
+[03/10/2015 10:52:09] Gabriel Lara Baptista: O que acham?
+[03/10/2015 10:52:36] leonardo oliveira: acho que seria bom
+[03/10/2015 10:54:14] Gabriel Lara Baptista: Ah, precisamos também ajustar as cardinalidades
+[03/10/2015 10:55:12] leonardo oliveira: sim eu fiz no papel com as cardinalidades
+[03/10/2015 10:55:49] Gabriel Lara Baptista: Ficou legal Leo
+[03/10/2015 10:55:52] Gabriel Lara Baptista: Parabéns!
+[03/10/2015 10:55:53] Gabriel Lara Baptista: Pequenos ajustes
