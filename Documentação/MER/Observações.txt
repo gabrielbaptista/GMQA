@@ -1,0 +1,4 @@
+Criei os Scripts do BD.
+Não sei se é possível criar Script do MER.
+Não Criei todas as tabelas, pq não achei no ER.
+Não fiz relacionamentos ainda.
