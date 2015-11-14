@@ -102,4 +102,7 @@
     <Build Include="Tables\Usuarios.sql" />
     <Build Include="Tables\Projetos.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="GMQA.publish.xml" />
+  </ItemGroup>
 </Project>
