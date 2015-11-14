@@ -99,7 +99,7 @@
     <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SQLDatabaseProj.localhost.publish.xml" />
+    <None Include="SQLDatabaseProj.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Usuarios.sql" />

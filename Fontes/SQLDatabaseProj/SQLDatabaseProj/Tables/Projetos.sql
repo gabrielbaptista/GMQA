@@ -2,8 +2,8 @@
 (
 	[Id_Proj] INT NOT NULL PRIMARY KEY IDENTITY, 
     [Nome] VARCHAR(1024) NOT NULL, 
-    [Id_User] INT NOT NULL, 
-    CONSTRAINT [FK_Projetos_Usuarios] FOREIGN KEY ([Id_User]) REFERENCES [Usuarios]([Id_User])
+    [IdUser] INT NOT NULL, 
+    CONSTRAINT [FK_Projetos_Usuarios] FOREIGN KEY ([IdUser]) REFERENCES [Usuarios]([Id_User])
 )
 
 GO
