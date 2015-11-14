@@ -99,13 +99,7 @@
     <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SQLDatabaseProj.publish.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <Build Include="Tables\Usuarios.sql" />
     <Build Include="Tables\Projetos.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="SQLDatabaseProj.refactorlog" />
   </ItemGroup>
 </Project>
