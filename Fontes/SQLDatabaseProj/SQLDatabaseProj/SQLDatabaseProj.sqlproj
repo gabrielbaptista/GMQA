@@ -105,7 +105,7 @@
     <Build Include="Tables\Riscos.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GMQA.xml" />
+    <None Include="GMQA.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SQLDatabaseProj.refactorlog" />
