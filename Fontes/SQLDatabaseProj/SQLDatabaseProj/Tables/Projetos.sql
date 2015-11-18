@@ -1,9 +1,16 @@
 ﻿CREATE TABLE [dbo].[Projetos]
 (
-	[Id_Proj] INT NOT NULL PRIMARY KEY IDENTITY, 
+	[Id_projeto] INT NOT NULL PRIMARY KEY IDENTITY, 
     [Nome] VARCHAR(1024) NOT NULL, 
-    [IdUser] INT NOT NULL, 
-    CONSTRAINT [FK_Projetos_Usuarios] FOREIGN KEY ([IdUser]) REFERENCES [Usuarios]([Id_User])
+    [Cliente_projeto] VARCHAR(1024) NOT NULL, 
+    [Data_inicio] DATE NOT NULL, 
+    [Dta_fim] DATE NOT NULL, 
+    [Data_real] DATE NULL, 
+    [Responsavel_projeto] VARCHAR(1024) NOT NULL, 
+    [Adm_projeto] VARCHAR(1024) NOT NULL, 
+    CONSTRAINT [FK_Projetos_Usuarios] FOREIGN KEY (Id_projeto) REFERENCES [Usuarios]([Id_user]), 
+    CONSTRAINT [FK_Projetos_Riscos] FOREIGN KEY (Id_projeto) REFERENCES [Riscos](Id_risco) 
+    
 )
 
 GO
