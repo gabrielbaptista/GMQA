@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Riscos]
 (
-	[Id_risco] INT NOT NULL PRIMARY KEY, 
+	[Id_risco] INT NOT NULL PRIMARY KEY IDENTITY, 
     [descricao_risco] NCHAR(10) NOT NULL
 )
 
