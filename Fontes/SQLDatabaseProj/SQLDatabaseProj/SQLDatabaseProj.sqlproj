@@ -101,8 +101,13 @@
   <ItemGroup>
     <Build Include="Tables\Usuarios.sql" />
     <Build Include="Tables\Projetos.sql" />
+    <Build Include="Tables\Cadastrar_Usuario.sql" />
+    <Build Include="Tables\Riscos.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GMQA.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="SQLDatabaseProj.refactorlog" />
   </ItemGroup>
 </Project>
