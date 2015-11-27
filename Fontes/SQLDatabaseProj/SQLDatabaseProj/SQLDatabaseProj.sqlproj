@@ -101,8 +101,8 @@
   <ItemGroup>
     <Build Include="Tables\Usuarios.sql" />
     <Build Include="Tables\Projetos.sql" />
-    <Build Include="Tables\Cadastrar_Usuario.sql" />
     <Build Include="Tables\Riscos.sql" />
+    <Build Include="Tables\NiveisAcesso.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GMQA.xml" />

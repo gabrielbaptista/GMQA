@@ -1,9 +1,9 @@
 ﻿CREATE TABLE [dbo].[Riscos]
 (
-	[Id_risco] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [descricao_risco] NCHAR(10) NOT NULL
+	[IdRisco] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [DescricaoRisco] VARCHAR(50) NOT NULL
 )
 
 GO
 
-CREATE INDEX [IX_Riscos_Column] ON [dbo].[Riscos] (descricao_risco)
+CREATE INDEX [IX_Riscos_Column] ON [dbo].[Riscos] ([DescricaoRisco])
