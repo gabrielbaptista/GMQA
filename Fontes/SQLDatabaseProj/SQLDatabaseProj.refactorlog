@@ -259,4 +259,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="DescricaoRisco" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="63b3936d-c8a0-48ab-8686-cdc53faab9d4" ChangeDateTime="12/02/2015 15:10:16">
+    <Property Name="ElementName" Value="[dbo].[CiclosProjetos].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CiclosProjetos]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdCiclosProjetos" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="249a6fdd-b960-4dc7-a9e9-0b188637026c" ChangeDateTime="12/02/2015 15:10:33">
+    <Property Name="ElementName" Value="[dbo].[CiclosProjetos].[IdCiclosProjetos]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CiclosProjetos]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdCicloProjeto" />
+  </Operation>
 </Operations>
