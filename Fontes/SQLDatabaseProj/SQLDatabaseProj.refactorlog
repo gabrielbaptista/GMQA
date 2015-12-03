@@ -273,4 +273,60 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="IdCicloProjeto" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="87adf2d3-6772-45b0-88a3-62bf62b8a550" ChangeDateTime="12/03/2015 00:11:14">
+    <Property Name="ElementName" Value="[dbo].[Etapas].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Etapas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdEtapas" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="24c6c232-e05a-4784-87a1-06adffae7cd8" ChangeDateTime="12/03/2015 00:26:16">
+    <Property Name="ElementName" Value="[dbo].[CiclosProjetos].[IdCicloProjeto]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CiclosProjetos]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdCiclos" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3996d8a3-bf1e-4e6f-8f4a-f42c9904e13f" ChangeDateTime="12/03/2015 00:28:38">
+    <Property Name="ElementName" Value="[dbo].[Etapas].[IdProjeto]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Etapas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IdCiclos" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="17fe5535-9e98-4ff8-a4b4-01385eabfdc2" ChangeDateTime="12/03/2015 00:31:27">
+    <Property Name="ElementName" Value="[dbo].[FK_Etapas_Ciclos]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Etapas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Ciclos]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="52403f8d-2d4e-4c0b-aa52-a75fcd60ac23" ChangeDateTime="12/03/2015 00:41:52">
+    <Property Name="ElementName" Value="[dbo].[Etapas].[IX_Etapas_Column]" />
+    <Property Name="ElementType" Value="SqlIndex" />
+    <Property Name="ParentElementName" Value="[dbo].[Etapas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[IX_Etapas_IdEtapas]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4ee9bb17-6a27-408b-9226-5ca9bc4bfc95" ChangeDateTime="12/03/2015 00:46:39">
+    <Property Name="ElementName" Value="[dbo].[FK_CiclosProjetos_Projetos]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[CiclosProjetos]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Ciclos_Projetos]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4b5fa30f-e721-46c9-b110-c2d5de4a057e" ChangeDateTime="12/03/2015 00:47:13">
+    <Property Name="ElementName" Value="[dbo].[FK_CiclosProjetos_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[CiclosProjetos]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Etapas_Ciclo]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cbe9a322-b426-4f62-a715-ae02796aa8dd" ChangeDateTime="12/03/2015 00:47:31">
+    <Property Name="ElementName" Value="[dbo].[FK_Etapas_Ciclo]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[CiclosProjetos]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Etapas_Ciclos]" />
+  </Operation>
 </Operations>
