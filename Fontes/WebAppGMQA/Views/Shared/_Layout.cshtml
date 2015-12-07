@@ -23,7 +23,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Formulário Teste", "FormularioTeste", "FormularioTeste")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -38,7 +38,9 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/angular")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/ctrlFormularioTeste")
     @RenderSection("scripts", required: false)
 </body>
 </html>

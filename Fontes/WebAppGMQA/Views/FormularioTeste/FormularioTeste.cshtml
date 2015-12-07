@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "FormularioTeste";
+}
+
+
+
+<h2>FormularioTeste</h2>
+
+<div>
+    <form class="form-horizontal"
+          name="myForm"
+          ng-controller="ctrFormularioTeste">
+        <fieldset>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Opções
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a ng-href ng-click="#/Salva">Salvar</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a ng-href="alert('Teste')">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        </fieldset>
+
+    </form>
+</div>
+
