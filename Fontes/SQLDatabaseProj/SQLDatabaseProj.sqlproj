@@ -103,6 +103,8 @@
     <Build Include="Tables\Projetos.sql" />
     <Build Include="Tables\Riscos.sql" />
     <Build Include="Tables\NiveisAcesso.sql" />
+    <Build Include="Tables\Ciclos.sql" />
+    <Build Include="Tables\Etapas.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GMQA.xml" />
