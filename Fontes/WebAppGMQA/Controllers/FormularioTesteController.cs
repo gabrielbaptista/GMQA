@@ -8,7 +8,7 @@ namespace WebAppGMQA.Controllers
 {
     public class FormularioTesteController : Controller
     {
-        public ActionResult FormularioTeste()
+        public ActionResult Index()
         {
             return View();
         }

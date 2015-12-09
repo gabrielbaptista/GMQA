@@ -1,16 +1,7 @@
-﻿
-@{
-    ViewBag.Title = "FormularioTeste";
-}
-
-
-
-<h2>FormularioTeste</h2>
-
-<div>
+﻿<div>
     <form class="form-horizontal"
           name="myForm"
-          ng-controller="ctrFormularioTeste">
+          ng-controller="ctrlFormularioTeste" ng-app="appTeste">
         <fieldset>
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -20,10 +11,12 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a ng-href ng-click="#/Salva">Salvar</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a ng-href="alert('Teste')">Sair</a></li>
+                            <li><a href="#/" ng-click="executa()">Executar</a></li>
                         </ul>
+                    </div>
+
+                    <div>
+                        <span ng-bind="status"></span>
                     </div>
                 </div>
                 </div>

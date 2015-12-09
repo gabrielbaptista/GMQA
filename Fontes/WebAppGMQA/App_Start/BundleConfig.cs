@@ -26,12 +26,13 @@ namespace WebAppGMQA
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                         "~/Scripts/angular.js"));
 
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/ctrlFormularioTeste").Include(
-                       "~/Scripts/Formularios/ctrFormularioTeste.js"));
+                       "~/Scripts/AngularControllers/ctrlFormularioTeste.js"));
         }
     }
 }

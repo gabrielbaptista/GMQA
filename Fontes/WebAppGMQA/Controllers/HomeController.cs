@@ -17,7 +17,6 @@ namespace WebAppGMQA.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-            ViewBag.Teste = "Teste do Gabriel";
             return View();
         }
 
