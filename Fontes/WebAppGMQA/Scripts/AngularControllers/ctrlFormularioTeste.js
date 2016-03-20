@@ -16,8 +16,11 @@ app.controller('ctrlFormularioTeste', ['$http', '$scope', '$interval', function 
                     $scope.status = "Concluído!"
                     break;
                 case "Concluído!":
-                    $scope.status = "Aguardando ação..."
                     $interval.cancel(timerPromise);
+                    if (document.origin != undefined)
+                        window.location.assign(document.origin + "/Home");
+                    else
+                        window.location.assign("/Home");
                     break;
             }
         };
