@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity;
 using WebAppCoreGMQA.ViewModels.Risco;
+using WebAppCoreGMQA.ViewModels.NivelAcesso;
 
 namespace WebAppCoreGMQA.Models
 {
@@ -18,5 +19,6 @@ namespace WebAppCoreGMQA.Models
             // Add your customizations after calling base.OnModelCreating(builder);
         }
         public DbSet<RiscoViewModel> RiscoViewModel { get; set; }
+        public DbSet<NivelAcessoViewModel> NivelAcessoViewModel { get; set; }
     }
 }

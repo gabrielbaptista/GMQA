@@ -117,6 +117,7 @@
     <None Include="GMQA.xml" />
     <None Include="SQLDatabaseProj.publish.xml" />
     <None Include="SQLDatabaseProjLocal.publish.xml" />
+    <None Include="SQLDatabaseProjFlavio.publish.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SQLDatabaseProj.refactorlog" />
