@@ -1,6 +1,6 @@
-﻿CREATE TABLE [dbo].[CiclosProjetos]
+﻿CREATE TABLE [dbo].[Ciclos]
 (
-	[IdCiclos] INT NOT NULL PRIMARY KEY, 
+	[IdCiclos] INT NOT NULL PRIMARY KEY IDENTITY, 
     [NumeroCiclo] INT NOT NULL, 
     [FaseCiclo] VARCHAR(50) NOT NULL, 
     [DataInicio] DATE NOT NULL, 

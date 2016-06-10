@@ -3,7 +3,7 @@ using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
 using WebAppCoreGMQA.Models;
-using WebAppCoreGMQA.ViewModels.Ciclos;
+using WebAppCoreGMQA.ViewModels.Ciclo;
 
 namespace WebAppCoreGMQA.Controllers
 {

@@ -6,7 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity;
 using WebAppCoreGMQA.ViewModels.Risco;
 using WebAppCoreGMQA.ViewModels.NivelAcesso;
-using WebAppCoreGMQA.ViewModels.Ciclos;
+using WebAppCoreGMQA.ViewModels.Ciclo;
 
 namespace WebAppCoreGMQA.Models
 {

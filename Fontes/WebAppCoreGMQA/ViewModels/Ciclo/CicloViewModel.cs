@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebAppCoreGMQA.ViewModels.Ciclos
+namespace WebAppCoreGMQA.ViewModels.Ciclo
 {   
     [Table ("Ciclos")]
     public class CicloViewModel
@@ -14,19 +14,19 @@ namespace WebAppCoreGMQA.ViewModels.Ciclos
         public int idCiclos { get; set; }
 
         [Required]
-        [Display(Name = "NumeroCiclo")]
+        [Display(Name = "Numero Ciclos")]
         public int NumeroCiclo { get; set; }
 
         [Required]
-        [Display(Name = "FaseCiclo")]
+        [Display(Name = "Fase do Ciclo")]
         public string FaseCiclo { get; set; }
 
         [Required]
-        [Display(Name = "DataInicio")]
+        [Display(Name = "Data de Inicio")]
         public DateTime DataInicio { get; set; }
 
         [Required]
-        [Display(Name = "DataFim")]
+        [Display(Name = "Data Final")]
         public DateTime DataFim { get; set; }
 
     }
