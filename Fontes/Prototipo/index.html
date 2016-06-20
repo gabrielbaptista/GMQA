@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="utf-8">
@@ -31,7 +31,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="img/gmqa_logo.png" alt="logo" width="197" height="70"/></a>
+                    <a asp-controller="Home" asp-action="Index"><img src="img/gmqa_logo.png" alt="logo" width="197" height="70" /></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
@@ -40,7 +40,7 @@
 						<li><a href="riscos.html">Riscos</a></li>
                         <li><a href="usuario.html">Usuário</a></li>
                         <li><a href="projeto.html">Projeto</a></li>
-                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="contato.html">Contato</a></li>-->
                     </ul>
                 </div>
             </div>
@@ -50,41 +50,33 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
 	<!-- end header -->
-	<section id="banner">
-	 
-	<!-- Slider -->
+    
+    <!-- Slider -->
+    <section id="banner">    
         <div id="main-slider" class="flexslider">
             <ul class="slides">
-              <li>
-                <img src="img/slides/1gestao.jpg" alt="" />
-                <div class="flex-caption">
-                    					 
-                </div>
-              </li>
-              <li>
-                <img src="img/slides/2medicao.jpg" alt="" />
-                <div class="flex-caption">
-                                      
-                    <li>
-                <img src="img/slides/3qualidade.jpg" alt="" />
-                <div class="flex-caption">
-                    					 
-                </div>
-              </li>
-              
-              <li>
-                <img src="img/slides/4artefatos.jpg" alt="" />
-                <div class="flex-caption">
-                    					 
-                </div>
-              </li>
-					 
-                </div>
-              </li>
+                <li>
+                    <img src="img/slides/1gestao.jpg" alt="" />
+                    <div class="flex-caption"></div>
+                </li>
+                <li>
+                    <img src="img/slides/2medicao.jpg" alt="" />
+                    <div class="flex-caption"></div>
+
+                <li>
+                    <img src="img/slides/3qualidade.jpg" alt="" />
+                    <div class="flex-caption"></div>
+                </li>
+
+                <li>
+                    <img src="img/slides/4artefatos.jpg" alt="" />
+                    <div class="flex-caption"></div>
+                </li>
             </ul>
         </div>
-	<!-- end slider -->
-	</section> 
+    </section>           
+    <!-- Slider End -->
+	
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
@@ -147,6 +139,7 @@
       </footer>
   </div>
   <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
   <!-- javascript
       ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->

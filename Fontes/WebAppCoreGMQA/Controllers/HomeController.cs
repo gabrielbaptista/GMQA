@@ -15,14 +15,14 @@ namespace WebAppCoreGMQA.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Pagina de descricão da Aplicação.";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Nossa página de Contato.";
 
             return View();
         }

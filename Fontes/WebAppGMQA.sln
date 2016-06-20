@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLDatabaseProj", "SQLDatabaseProj\SQLDatabaseProj.sqlproj", "{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}"
 EndProject
@@ -25,6 +25,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Prototipo", "Prototipo\", "
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "63459"
+		SlnRelativePath = "Prototipo\"
 	EndProjectSection
 EndProject
 Global
