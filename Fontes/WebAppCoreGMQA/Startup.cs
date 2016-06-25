@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.Data.Entity;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using WebAppCoreGMQA.Models;
 using WebAppCoreGMQA.Services;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebAppCoreGMQA
 {
@@ -19,9 +15,9 @@ namespace WebAppCoreGMQA
         public Startup(IHostingEnvironment env)
         {
             // Set up configuration sources.
-
             var builder = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
 
             if (env.IsDevelopment())
@@ -45,10 +41,12 @@ namespace WebAppCoreGMQA
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
-            services.AddEntityFramework()
-                .AddSqlServer()
-                .AddDbContext<ApplicationDbContext>(options =>
-                    options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+
+            services.AddEntityFrameworkSqlServer();
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+               options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+            
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -92,8 +90,6 @@ namespace WebAppCoreGMQA
                 catch { }
             }
 
-            app.UseIISPlatformHandler(options => options.AuthenticationDescriptions.Clear());
-
             app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseStaticFiles();
@@ -109,8 +105,5 @@ namespace WebAppCoreGMQA
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
-
-        // Entry point for the application.
-        public static void Main(string[] args) => WebApplication.Run<Startup>(args);
     }
 }

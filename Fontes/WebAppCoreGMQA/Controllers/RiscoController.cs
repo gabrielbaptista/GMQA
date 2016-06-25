@@ -1,6 +1,6 @@
 using System.Linq;
-using Microsoft.AspNet.Mvc;
-using Microsoft.AspNet.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Data.Entity;
 using WebAppCoreGMQA.Models;
 using WebAppCoreGMQA.ViewModels.Risco;
@@ -27,13 +27,13 @@ namespace WebAppCoreGMQA.Controllers
         {
             if (id == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             RiscoViewModel riscoViewModel = _context.RiscoViewModel.Single(m => m.IdRisco == id);
             if (riscoViewModel == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             return View(riscoViewModel);
@@ -64,13 +64,13 @@ namespace WebAppCoreGMQA.Controllers
         {
             if (id == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             RiscoViewModel riscoViewModel = _context.RiscoViewModel.Single(m => m.IdRisco == id);
             if (riscoViewModel == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
             return View(riscoViewModel);
         }
@@ -95,13 +95,13 @@ namespace WebAppCoreGMQA.Controllers
         {
             if (id == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             RiscoViewModel riscoViewModel = _context.RiscoViewModel.Single(m => m.IdRisco == id);
             if (riscoViewModel == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             return View(riscoViewModel);

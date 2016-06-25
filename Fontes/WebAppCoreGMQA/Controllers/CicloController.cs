@@ -1,7 +1,5 @@
 using System.Linq;
-using Microsoft.AspNet.Mvc;
-using Microsoft.AspNet.Mvc.Rendering;
-using Microsoft.Data.Entity;
+using Microsoft.AspNetCore.Mvc;
 using WebAppCoreGMQA.Models;
 using WebAppCoreGMQA.ViewModels.Ciclo;
 
@@ -27,13 +25,13 @@ namespace WebAppCoreGMQA.Controllers
         {
             if (id == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.idCiclos == id);
             if (cicloViewModel == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             return View(cicloViewModel);
@@ -64,13 +62,13 @@ namespace WebAppCoreGMQA.Controllers
         {
             if (id == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.idCiclos == id);
             if (cicloViewModel == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
             return View(cicloViewModel);
         }
@@ -95,13 +93,13 @@ namespace WebAppCoreGMQA.Controllers
         {
             if (id == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.idCiclos == id);
             if (cicloViewModel == null)
             {
-                return HttpNotFound();
+                return NotFound();
             }
 
             return View(cicloViewModel);
