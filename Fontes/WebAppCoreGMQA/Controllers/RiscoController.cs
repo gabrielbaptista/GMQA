@@ -1,7 +1,5 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Data.Entity;
 using WebAppCoreGMQA.Models;
 using WebAppCoreGMQA.ViewModels.Risco;
 
