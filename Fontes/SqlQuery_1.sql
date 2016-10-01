@@ -1,0 +1,1 @@
+﻿SELECT * FROM GMQA.dbo.Usuarios
