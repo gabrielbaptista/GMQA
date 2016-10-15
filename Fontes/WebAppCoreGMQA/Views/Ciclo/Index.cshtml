@@ -29,10 +29,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.DataFim)
+            @Html.DisplayFor(modelItem => item.DataInicio)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DataInicio)
+           @Html.DisplayFor(modelItem => item.DataFim)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FaseCiclo)
