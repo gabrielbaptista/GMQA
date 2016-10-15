@@ -416,9 +416,10 @@ max-width: 100%;
 
 
 /* --- button --- */
-.btn{text-align: center;color: #fff;padding: 12px 25px;border-radius: 0;}
+.btn{text-align: center;
+     padding: 12px 25px;border-radius: 0;}
 .btn-theme {
-	color: #fff;
+	/*color: #fff; */
 	background: transparent;
 	border: 1px solid #fff;
 	padding: 12px 30px;
