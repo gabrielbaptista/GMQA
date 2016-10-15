@@ -7,15 +7,15 @@
 <h2>@ViewData["Title"].</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Criar novo Ciclo</a>
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DataFim)
+        <th> 
+         @Html.DisplayNameFor(model => model.DataInicio)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DataInicio)
+           @Html.DisplayNameFor(model => model.DataFim) 
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FaseCiclo)
