@@ -11,7 +11,7 @@ namespace WebAppCoreGMQA.ViewModels.Ciclo
     public class CicloViewModel
     {
         [Key]
-        public int idCiclos { get; set; }
+        public int IdCiclos { get; set; }
 
         [Required]
         [Display(Name = "Numero Ciclos")]

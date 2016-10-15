@@ -28,7 +28,7 @@ namespace WebAppCoreGMQA.Controllers
                 return NotFound();
             }
 
-            CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.idCiclos == id);
+            CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.IdCiclos == id);
             if (cicloViewModel == null)
             {
                 return NotFound();
@@ -65,7 +65,7 @@ namespace WebAppCoreGMQA.Controllers
                 return NotFound();
             }
 
-            CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.idCiclos == id);
+            CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.IdCiclos == id);
             if (cicloViewModel == null)
             {
                 return NotFound();
@@ -96,7 +96,7 @@ namespace WebAppCoreGMQA.Controllers
                 return NotFound();
             }
 
-            CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.idCiclos == id);
+            CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.IdCiclos == id);
             if (cicloViewModel == null)
             {
                 return NotFound();
@@ -110,7 +110,7 @@ namespace WebAppCoreGMQA.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.idCiclos == id);
+            CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.IdCiclos == id);
             _context.CicloViewModel.Remove(cicloViewModel);
             _context.SaveChanges();
             return RedirectToAction("Index");
