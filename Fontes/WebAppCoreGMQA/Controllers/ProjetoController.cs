@@ -35,6 +35,7 @@ namespace WebAppCoreGMQA.Controllers
         {
             if (ModelState.IsValid)
                 {
+                projetoViewModel.DataReal = DateTime.Now;
                 _context.ProjetoViewModel.Add(projetoViewModel);
                 _context.SaveChanges();
                 return RedirectToAction("Index");

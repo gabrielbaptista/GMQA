@@ -41,5 +41,7 @@ namespace WebAppCoreGMQA.ViewModels.Projeto
         [Display(Name = "Id do adm ")]
         public int IdUserAdmProjeto { get; set; }
 
+        //public Usuarios
+
     }
 }
