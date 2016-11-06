@@ -4,6 +4,7 @@ using WebAppCoreGMQA.ViewModels.NivelAcesso;
 using WebAppCoreGMQA.ViewModels.Ciclo;
 using Microsoft.EntityFrameworkCore;
 using WebAppCoreGMQA.ViewModels.Projeto;
+using WebAppCoreGMQA.ViewModels.Usuario;
 
 namespace WebAppCoreGMQA.Models
 {
@@ -22,5 +23,7 @@ namespace WebAppCoreGMQA.Models
         public DbSet<NivelAcessoViewModel> NivelAcessoViewModel { get; set; }
         public DbSet<CicloViewModel> CicloViewModel { get; set; }
         public DbSet<ProjetoViewModel> ProjetoViewModel { get; set; }
+        public DbSet<UsuarioViewModel> UsuarioViewModel { get; set; }
+
     }
 }

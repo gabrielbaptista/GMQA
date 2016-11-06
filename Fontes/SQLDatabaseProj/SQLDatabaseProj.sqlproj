@@ -114,9 +114,6 @@
     <Build Include="Tables\AspNetUsers.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SQLDatabaseProj.publish.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <RefactorLog Include="SQLDatabaseProj.refactorlog" />
   </ItemGroup>
 </Project>

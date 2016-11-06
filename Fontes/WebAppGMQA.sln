@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLDatabaseProj", "SQLDatabaseProj\SQLDatabaseProj.sqlproj", "{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}"
 EndProject
@@ -36,7 +36,6 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}.Release|Any CPU.Deploy.0 = Release|Any CPU

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Projeto";
 }
 
-<h2>@ViewData["Title"].</h2>
+<h2>@ViewData["Title"]</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -36,16 +36,16 @@
                 @Html.DisplayFor(modelItem => item.ClienteProjeto)
             </td>
 
-            <td>
+            <td class="DataInicio">
                 @Html.DisplayFor(modelItem => item.DataInicio)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DataFim)
             </td>
             <td>
-                @*<a asp-action="Edit" asp-route-id="@item.IdProjeto">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdProjeto">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdProjeto">Delete</a>*@
+                <a asp-action="Edit" asp-route-id="@item.IdProjeto">Edit</a> |
+                @*<a asp-action="Details" asp-route-id="@item.IdProjeto">Details</a> |*@
+                <a asp-action="Delete" asp-route-id="@item.IdProjeto">Delete</a>
             </td>
         </tr>
     }

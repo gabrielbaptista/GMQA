@@ -4,14 +4,14 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
+<h2>Edit</h2>
 
-<form asp-action="Create" id="Create">
+<form asp-action="Edit" id="Create">
     <div class="form-horizontal">
         <h4>ProjetoViewModel</h4>
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        
+        <input type="hidden" asp-for="IdProjeto" />
         <div class="form-group">
             <label asp-for="Nome" class="col-md-2 control-label"></label>        
             <div class="col-md-10">
@@ -47,7 +47,7 @@
 
             <label style="margin-top:20px" asp-for="IdUserResponsavelProjeto" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                @Html.DropDownListFor(a => a.IdUserResponsavelProjeto, new SelectList(ViewBag.Usuarios, "IdUser", "Nome"),"Selecione", new { @class="form-control", @style = "margin-top:20px; width: 170px;"})
+                @Html.DropDownListFor(a => a.IdUserResponsavelProjeto, new SelectList(ViewBag.Usuarios, "IdUser", "Nome"), "Selecione", new { @class = "form-control", @style = "margin-top:20px; width: 170px;" })
                 <span asp-validation-for="IdUserResponsavelProjeto" class="text-danger" />
             </div>
 
@@ -61,7 +61,7 @@
         
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input id="create" type="button" value="Create" class="btn btn-default" onclick="validar()" />
+                <input id="create" type="button" value="Edit" class="btn btn-default" onclick="validar()" />
             </div>
         </div>
     </div>
