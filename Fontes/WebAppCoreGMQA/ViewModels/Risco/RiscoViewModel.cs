@@ -17,5 +17,37 @@ namespace WebAppCoreGMQA.ViewModels.Risco
         [Required]
         [Display(Name = "Descrição")]
         public string DescricaoRisco { get; set; }
+
+        [Required]
+        [Display(Name = "Projeto")]
+        public int IdProjeto { get; set; }
+
+        [Required]
+        [Display(Name = "Ciclo")]
+        public int IdCiclo { get; set; }
+
+        [Required]
+        [Display(Name = "Categoria")]
+        public int Categoria { get; set; }
+
+        [Required]
+        [Display(Name = "Probabilidade de Ocorrência")]
+        public int ProbabilidadeOcorrencia { get; set; }
+
+        [Required]
+        [Display(Name = "Efeito de Ocorrência")]
+        public int EfeitoOcorrencia { get; set; }
+
+        [Required]
+        [Display(Name = "Ação")]
+        public string Acao { get; set; }
+
+        [Required]
+        [Display(Name = "Responsavel pela Ação")]
+        public string ResponsavelAcao { get; set; }
+        
+        [Required]
+        [Display(Name = "Status")]
+        public int Status { get; set; }
     }
 }

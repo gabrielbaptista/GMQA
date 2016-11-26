@@ -40,6 +40,9 @@ namespace WebAppCoreGMQA.Controllers
         // GET: Risco/Create
         public IActionResult Create()
         {
+            ViewBag.Ciclos = _context.CicloViewModel.ToList();
+            ViewBag.Projetos = _context.ProjetoViewModel.ToList();
+
             return View();
         }
 

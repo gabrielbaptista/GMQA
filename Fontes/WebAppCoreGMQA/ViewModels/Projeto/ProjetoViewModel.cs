@@ -24,19 +24,19 @@ namespace WebAppCoreGMQA.ViewModels.Projeto
 
         [Required]
         [Display(Name = "Data de Inicio")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
         [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         public DateTime DataInicio { get; set; }
         
         [Required]
         [Display(Name = "Data de Fim ")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
+       //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
         [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         public DateTime DataFim { get; set; }
 
         [Required]
         [Display(Name = "Data Real ")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
         [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         public DateTime DataReal { get; set; }
 
@@ -48,7 +48,10 @@ namespace WebAppCoreGMQA.ViewModels.Projeto
         [Display(Name = "Id do adm ")]
         public int IdUserAdmProjeto { get; set; }
 
-       // public IList<UsuarioViewModel>  ListaUsuarios { get; set; }
+        [Required]
+        [Display(Name = "Status")]
+        public string Status { get; set;}
+        // public IList<UsuarioViewModel>  ListaUsuarios { get; set; }
 
     }
 }

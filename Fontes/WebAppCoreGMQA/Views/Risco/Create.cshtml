@@ -11,14 +11,88 @@
         <h4>RiscoViewModel</h4>
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        
+
         <div class="form-group">
             <label asp-for="DescricaoRisco" class="col-md-2 control-label"></label>
             <div class="col-md-10">
                 <input asp-for="DescricaoRisco" class="form-control" />
                 <span asp-validation-for="DescricaoRisco" class="text-danger" />
             </div>
+
+            <label style="margin-top:20px" asp-for="IdProjeto" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(a => a.IdProjeto, new SelectList(ViewBag.Projetos, "IdProjeto", "Nome"), "Selecione", new { @class = "form-control", @style = "margin-top:20px; width: 170px;" })
+                <span asp-validation-for="IdProjeto" class="text-danger" />
+            </div>
+
+            <label style="margin-top:20px" asp-for="IdCiclo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(a => a.IdCiclo, new SelectList(ViewBag.Ciclos, "IdCiclos", "NumeroCiclo"), "Selecione", new { @class = "form-control", @style = "margin-top:20px; width: 170px;" })
+                <span asp-validation-for="IdCiclo" class="text-danger" />
+            </div>
+
+            <label style="margin-top:20px" asp-for="Acao" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Acao" class="form-control" style="margin-top:20px" />
+                <span asp-validation-for="Acao" class="text-danger" />
+            </div>
+
+            <label style="margin-top:20px" asp-for="ResponsavelAcao" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ResponsavelAcao" class="form-control" style="margin-top:20px" />
+                <span asp-validation-for="ResponsavelAcao" class="text-danger" />
+            </div>
+
+            <label style="margin-top:20px" asp-for="EfeitoOcorrencia" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="EfeitoOcorrencia" name="EfeitoOcorrencia" id="EfeitoOcorrencia" class="form-control" style="margin-top:20px; width: 170px;">
+                    <option value="Catastroficos">Catastróficos</option>
+                    <option value="Serios">Sérios</option>
+                    <option value="Toleraveis">Toleráveis</option>
+                    <option value="Insignificantes">Insignificantes</option>
+                </select>
+                <span asp-validation-for="EfeitoOcorrencia" class="text-danger" />
+            </div>
+
+            <label style="margin-top:20px" asp-for="Categoria" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="Categoria" name="Categoria" id="Categoria" class="form-control" style="margin-top:20px; width: 170px;">
+                    <option value="Tecnologicos">Tecnológicos</option>
+                    <option value="Equipe">Equipe</option>
+                    <option value="Organizacionais">Organizacionais</option>
+                    <option value="Ferramentas">Ferramentas</option>
+                    <option value="Estimativa">Estimativa</option>
+                </select>
+                <span asp-validation-for="Categoria" class="text-danger" />
+            </div>
+
+
+            <label style="margin-top:20px" asp-for="Status" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="Status" name="Status" id="Status" class="form-control" style="margin-top:20px; width: 170px;">
+                    <option value="monitoramento">Em monitoramento</option>
+                    <option value="Sanado">Sanado</option>
+                    <option value="Mitigado">Mitigado</option>
+
+                </select>
+                <span asp-validation-for="Status" class="text-danger" />
+            </div>
+
         </div>
-        <div class="form-group">
+
+            <label style="margin-bottom:20px" asp-for="ProbabilidadeOcorrencia" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="ProbabilidadeOcorrencia" name="ProbabilidadeOcorrencia" id="ProbabilidadeOcorrencia" class="form-control" style="margin-top:20px; width: 170px;">
+                    <option value="Alta">Alta</option>
+                    <option value="Media">Média</option>
+                    <option value="Baixa">Baixa</option>
+                    
+                </select>
+                <span asp-validation-for="ProbabilidadeOcorrencia" class="text-danger" />
+            </div>
+       
+         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
