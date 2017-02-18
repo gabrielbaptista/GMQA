@@ -3,50 +3,44 @@
 @{
     ViewData["Title"] = "Projeto";
 }
+<div class="row">
+    <div class="col-md-8 col-lg-8">
+        <h2>@ViewData["Title"]</h2>
+    </div><!-- /.col-lg-6 -->
+    <div class="col-md-4 col-lg-4">
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Search!</button>
+            </span>
+            <input id="filtro" onkeyup="SearchProject();" type="text" class="form-control" placeholder="Search for...">
+        </div>
+    </div>
+</div>
 
-<h2>@ViewData["Title"]</h2>
+
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ClienteProjeto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataInicio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataFim)
-        </th>
-    </tr>
+<div>
+    @Html.Partial("SearchProject")
+</div>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClienteProjeto)
-            </td>
 
-            <td class="DataInicio">
-                @Html.DisplayFor(modelItem => item.DataInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataFim)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdProjeto">Edit</a> |
-                @*<a asp-action="Details" asp-route-id="@item.IdProjeto">Details</a> |*@
-                <a asp-action="Delete" asp-route-id="@item.IdProjeto">Delete</a>
-            </td>
-        </tr>
+<script>
+    function SearchProject() {
+        $.ajax({
+            type: 'post',
+            url : '@Url.Action("SearchProject")',
+            dataType: 'html',
+            data: {
+                filtro: $("#filtro").val()
+            },
+            success: function (data) {
+                $('.table').html(data);
+            }
+
+        });
     }
-</table>
+</script>

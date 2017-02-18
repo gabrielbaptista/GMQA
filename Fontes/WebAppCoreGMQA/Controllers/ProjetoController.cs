@@ -101,5 +101,12 @@ namespace WebAppCoreGMQA.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult SearchProject(string filtro)
+        {
+            var search = _context.ProjetoViewModel.Where(a => a.Nome.Contains(filtro)).ToList();
+
+            return PartialView(search);
+        }
+
     }
 }
