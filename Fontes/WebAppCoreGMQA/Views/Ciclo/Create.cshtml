@@ -6,7 +6,7 @@
 
 <h2>Create</h2>
 
-<form asp-action="Create">
+<form asp-action="Create" id="Create">
     <div class="form-horizontal">
         <h4>CicloViewModel</h4>
         <hr />
@@ -14,17 +14,19 @@
         <div class="form-group">
             <label asp-for="DataInicio" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="DataFim" class="form-control" placeholder="DD/MM/YYYY" />
+                <input type="date" asp-for="DataInicio" class="form-control" placeholder="DD/MM/YYYY" />
                 <span asp-validation-for="DataInicio" class="text-danger" />
             </div>
-        </div>               
+        </div>
         <div class="form-group">
             <label asp-for="DataFim" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="DataInicio" class="form-control" placeholder="DD/MM/YYYY" />
+                <input type="date" asp-for="DataFim" class="form-control" placeholder="DD/MM/YYYY" />
                 <span asp-validation-for="DataFim" class="text-danger" />
+                <span id="erroData" hidden class="text-danger">Data fim é menor que data de inicio.</span>
             </div>
         </div>
+
         <div class="form-group">
             <label asp-for="FaseCiclo" class="col-md-2 control-label"></label>
             <div class="col-md-10">
@@ -41,7 +43,7 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="button" onclick="validar()" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
@@ -55,4 +57,20 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+        function validar() {
+            debugger;
+            var dataInicio = $('#DataInicio').val();
+            var dataFim = $('#DataFim').val();
+
+            if (dataInicio <= dataFim) {
+                $("#Create").submit();
+            }
+            else {
+                //alert("Data fim maior que data inicio");
+                $("#erroData").show();
+            }
+        }
+    </script>
 }

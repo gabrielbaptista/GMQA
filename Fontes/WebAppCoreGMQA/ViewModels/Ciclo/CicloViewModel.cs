@@ -29,5 +29,13 @@ namespace WebAppCoreGMQA.ViewModels.Ciclo
         [Display(Name = "Data Final")]
         public DateTime DataFim { get; set; }
 
+        [Required]
+        [Display(Name = "Projeto")]
+        public int IdProjeto { get; set; }
+
+        [Required]
+        [Display(Name = "Projeto")]
+        public int IdProjeto { get; set; }
+
     }
 }
