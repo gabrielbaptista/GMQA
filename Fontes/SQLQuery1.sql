@@ -22,6 +22,8 @@ values
 --#####   CRIAÇÃO DE PROJETOS    #####
 SELECT * FROM GMQA.dbo.Projetos
 
+delete from GMQA.dbo.Projetos
+
 INSERT INTO GMQA.dbo.Projetos (Nome, ClienteProjeto, DataInicio, DataFim, DataReal, IdUserResponsavelProjeto, IdUserAdmProjeto)
 VALUES
 ('PROJETO TESTE', 'GOOGLE', GETDATE()-20, GETDATE()+10, GETDATE(), '1', '2'),
