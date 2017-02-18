@@ -8,7 +8,7 @@
     [DataReal] DATE NOT NULL, 
     [IdUserResponsavelProjeto] INT NOT NULL, 
     [IdUserAdmProjeto] INT NOT NULL, 
-    [Status] VARBINARY(50) NOT NULL, 
+    [Status] VARCHAR(50) NOT NULL, 
     CONSTRAINT [FK_Projetos_Usuarios_Responsavel] FOREIGN KEY ([IdUserResponsavelProjeto]) REFERENCES [Usuarios]([IdUser]), 
     CONSTRAINT [FK_Projetos_Usuarios_Administrador] FOREIGN KEY ([IdUserAdmProjeto]) REFERENCES [Usuarios]([IdUser]) 
  
