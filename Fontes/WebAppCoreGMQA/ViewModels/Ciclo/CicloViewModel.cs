@@ -34,8 +34,8 @@ namespace WebAppCoreGMQA.ViewModels.Ciclo
         public int IdProjeto { get; set; }
 
         [Required]
-        [Display(Name = "Projeto")]
-        public int IdProjeto { get; set; }
+        [Display(Name = "Etapa")]
+        public int IdEtapa { get; set; }
 
     }
 }

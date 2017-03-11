@@ -40,6 +40,8 @@ namespace WebAppCoreGMQA.Controllers
         // GET: Ciclo/Create
         public IActionResult Create()
         {
+            ViewBag.IdProjeto = _context.ProjetoViewModel.ToList();
+            
             return View();
         }
 
