@@ -1,0 +1,44 @@
+﻿@model IEnumerable<WebAppCoreGMQA.ViewModels.Ciclo.CicloViewModel>
+ @{ 
+     Layout = null;
+ }
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DataInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataFim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaseCiclo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroCiclo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FaseCiclo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroCiclo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdCiclos">Editar Ciclo</a> |
+                <a asp-action="Details" asp-route-id="@item.IdCiclos">Detalhe do Ciclo</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdCiclos">Deletar Ciclo</a>
+            </td>
+        </tr>
+    }
+</table>

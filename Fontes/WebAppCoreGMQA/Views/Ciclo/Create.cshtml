@@ -24,8 +24,9 @@
             <div class="col-md-10">
                 <input type="date" asp-for="DataFim" class="form-control" placeholder="DD/MM/YYYY" />
                 <span asp-validation-for="DataFim" class="text-danger" />
-                <span id="erroData" hidden class="text-danger">Data fim é menor que data de inicio.</span>
             </div>
+            <span id="erroData" style="padding-left:15px;" hidden class="text-danger">Data fim é menor que data de inicio.</span>
+
         </div>
 
         <div class="form-group">
@@ -43,19 +44,21 @@
             </div>
         </div>
         <div class="form-group">
-            <label style="margin-top:20px" asp-for="IdUserAdmProjeto" class="col-md-2 control-label"></label>
+            <label style="margin-top:20px" asp-for="IdProjeto" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                @Html.DropDownListFor(a => a.IdProjeto, new SelectList(ViewBag.IdProjeto, "IdProjeto", "Descricao"), "Selecione", new { @class = "form-control", @style = "margin-top:20px; width: 170px;" })
-                <span asp-validation-for="IdUserAdmProjeto" class="text-danger" />
+                @Html.DropDownListFor(a => a.IdProjeto, new SelectList(ViewBag.IdProjeto, "IdProjeto", "Nome"), "Selecione", new { @class = "form-control", @style = "margin-top:20px; width: 170px;" })
+                <span asp-validation-for="IdProjeto" class="text-danger" />
             </div>
         </div>
         <div class="form-group">
-            <label style="margin-top:20px" asp-for="IdEtapa" class="col-md-2 control-label"></label>
+            <label style="margin-top:20px" asp-for="IdEtapas" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                @Html.DropDownListFor(a => a.IdEtapa, new SelectList(ViewBag.IdEtapa, "IdEtapa", "Descricao"), "Selecione", new { @class = "form-control", @style = "margin-top:20px; width: 170px;" })
-                <span asp-validation-for="IdEtapa" class="text-danger" />
+                @Html.DropDownListFor(a => a.IdEtapas, new SelectList(ViewBag.IdEtapa, "IdEtapas", "Descricao"), "Selecione", new { @class = "form-control", @style = "margin-top:20px; width: 170px;" })
+                <span asp-validation-for="IdEtapas" class="text-danger" />
             </div>
         </div>
+
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="button" onclick="validar()" value="Create" class="btn btn-default" />

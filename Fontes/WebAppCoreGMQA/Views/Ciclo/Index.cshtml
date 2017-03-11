@@ -3,48 +3,24 @@
 @{
     ViewData["Title"] = "Ciclos";
 }
-
-<h2>@ViewData["Title"].</h2>
+<div class="row">
+    <div class="col-md-8 col-lg-8">
+        <h2>@ViewData["Title"]</h2>
+    </div><!-- /.col-lg-6 -->
+    <div class="col-md-4 col-lg-4">
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Search!</button>
+            </span>
+            <input id="filtro" onkeyup="SearchProject('@Url.Action("SearchProject")');" type="text" class="form-control" placeholder="Search for...">
+        </div>
+    </div>
+</div>
 
 <p>
     <a asp-action="Create">Criar novo Ciclo</a>
 </p>
-<table class="table">
-    <tr>
-        <th> 
-         @Html.DisplayNameFor(model => model.DataInicio)
-        </th>
-        <th>
-           @Html.DisplayNameFor(model => model.DataFim) 
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FaseCiclo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NumeroCiclo)
-        </th>
-        <th></th>
-    </tr>
-    
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataInicio)
-        </td>
-        <td>
-           @Html.DisplayFor(modelItem => item.DataFim)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FaseCiclo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumeroCiclo)
-        </td>
-        <td>
-            <a asp-action="Edit" asp-route-id="@item.IdCiclos">Editar Ciclo</a> |
-            <a asp-action="Details" asp-route-id="@item.IdCiclos">Detalhe do Ciclo</a> |
-            <a asp-action="Delete" asp-route-id="@item.IdCiclos">Deletar Ciclo</a>
-        </td>
-    </tr>
-}
-</table>
+
+<div>
+    @Html.Partial("SearchProject")
+</div>

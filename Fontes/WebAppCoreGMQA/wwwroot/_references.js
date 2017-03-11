@@ -15,6 +15,7 @@
 /// <reference path="js/portfolio/setting.js" />
 /// <reference path="js/quicksand/jquery.quicksand.js" />
 /// <reference path="js/quicksand/setting.js" />
+/// <reference path="js/searchproject.js" />
 /// <reference path="js/site.js" />
 /// <reference path="js/validator.min.js" />
 /// <reference path="lib/bootstrap/dist/js/bootstrap.js" />

@@ -22,10 +22,12 @@ namespace WebAppCoreGMQA.ViewModels.Ciclo
         public string FaseCiclo { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         [Display(Name = "Data de Inicio")]
         public DateTime DataInicio { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         [Display(Name = "Data Final")]
         public DateTime DataFim { get; set; }
 
@@ -35,7 +37,7 @@ namespace WebAppCoreGMQA.ViewModels.Ciclo
 
         [Required]
         [Display(Name = "Etapa")]
-        public int IdEtapa { get; set; }
+        public int IdEtapas { get; set; }
 
     }
 }

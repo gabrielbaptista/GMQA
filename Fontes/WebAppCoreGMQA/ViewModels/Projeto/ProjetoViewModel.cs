@@ -24,13 +24,15 @@ namespace WebAppCoreGMQA.ViewModels.Projeto
 
         [Required]
         [Display(Name = "Data de Inicio")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
         [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         public DateTime DataInicio { get; set; }
         
         [Required]
         [Display(Name = "Data de Fim ")]
-       //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy}")]
         [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         public DateTime DataFim { get; set; }
 

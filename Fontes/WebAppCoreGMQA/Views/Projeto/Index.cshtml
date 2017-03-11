@@ -12,7 +12,7 @@
             <span class="input-group-btn">
                 <button class="btn btn-default" type="button">Search!</button>
             </span>
-            <input id="filtro" onkeyup="SearchProject();" type="text" class="form-control" placeholder="Search for...">
+            <input id="filtro" onkeyup="SearchProject('@Url.Action("SearchProject")');" type="text" class="form-control" placeholder="Search for...">
         </div>
     </div>
 </div>
@@ -27,12 +27,13 @@
     @Html.Partial("SearchProject")
 </div>
 
-
-<script>
+@*<script>
     function SearchProject() {
+        debugger
         $.ajax({
+
+            url: '@Url.Action("SearchProject")',
             type: 'post',
-            url : '@Url.Action("SearchProject")',
             dataType: 'html',
             data: {
                 filtro: $("#filtro").val()
@@ -42,5 +43,5 @@
             }
 
         });
-    }
-</script>
+    } 
+</script>*@
