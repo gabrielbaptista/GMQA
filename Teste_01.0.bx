@@ -1,0 +1,1319 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<WebScript v='30205'>
+	<Variables>
+	</Variables>
+	<nextScriptId>63</nextScriptId>
+	<Object>null</Object>
+	<dataSources>
+	</dataSources>
+	<Script v='3'>
+		<ver>14</ver>
+		<id>1</id>
+		<Summary v='3'>
+			<played>3</played>
+			<succeeded>3</succeeded>
+			<maxResponseTime>1382</maxResponseTime>
+			<averageResponseTime>896</averageResponseTime>
+		</Summary>
+		<childCount>1</childCount>
+		<ChildItems>
+			<SuiteItem v='1'>
+				<ver>14</ver>
+				<id>4</id>
+				<Summary v='3'>
+					<played>3</played>
+					<succeeded>3</succeeded>
+					<maxResponseTime>1382</maxResponseTime>
+					<averageResponseTime>896</averageResponseTime>
+				</Summary>
+				<childCount>1</childCount>
+				<ChildItems>
+					<TestItem v='3'>
+						<ver>14</ver>
+						<id>3</id>
+						<Summary v='3'>
+							<played>3</played>
+							<succeeded>3</succeeded>
+							<maxResponseTime>1382</maxResponseTime>
+							<averageResponseTime>896</averageResponseTime>
+						</Summary>
+						<childCount>1</childCount>
+						<ChildItems>
+							<Step v='4'>
+								<ver>14</ver>
+								<id>2</id>
+								<Summary v='3'>
+									<played>3</played>
+									<succeeded>3</succeeded>
+									<maxResponseTime>1382</maxResponseTime>
+									<averageResponseTime>896</averageResponseTime>
+								</Summary>
+								<childCount>3</childCount>
+								<ChildItems>
+									<Request v='10'>
+										<ver>14</ver>
+										<id>5</id>
+										<Summary v='3'>
+											<played>1</played>
+											<succeeded>1</succeeded>
+											<maxResponseTime>692</maxResponseTime>
+											<averageResponseTime>692</averageResponseTime>
+										</Summary>
+										<childCount>2</childCount>
+										<ChildItems>
+											<ResponsesItem v='4'>
+												<ver>14</ver>
+												<id>13</id>
+												<Summary v='3'>
+													<played>1</played>
+													<succeeded>1</succeeded>
+													<maxResponseTime>692</maxResponseTime>
+													<averageResponseTime>692</averageResponseTime>
+												</Summary>
+												<childCount>1</childCount>
+												<ChildItems>
+													<Response v='3'>
+														<ver>14</ver>
+														<id>12</id>
+														<Summary v='3'>
+															<played>1</played>
+															<succeeded>1</succeeded>
+															<maxResponseTime>692</maxResponseTime>
+															<averageResponseTime>692</averageResponseTime>
+														</Summary>
+														<timeMs>692</timeMs>
+														<size>7170</size>
+														<encodedContent>false</encodedContent>
+														<content>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+        &lt;title&gt;Home Page - GMQA&lt;/title&gt;
+
+        &lt;link href=&quot;/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+        &lt;link href=&quot;/css/fancybox/jquery.fancybox.css&quot; rel=&quot;stylesheet&quot;&gt;
+        &lt;link href=&quot;/css/jcarousel.css&quot; rel=&quot;stylesheet&quot; /&gt;
+        &lt;link href=&quot;/css/flexslider.css&quot; rel=&quot;stylesheet&quot; /&gt;
+        &lt;link href=&quot;/js/owl-carousel/owl.carousel.css&quot; rel=&quot;stylesheet&quot;&gt;
+        &lt;link href=&quot;/css/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+
+
+        
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;div class=&quot;navbar navbar-default navbar-static-top&quot;&gt;
+                &lt;div class=&quot;container&quot;&gt;
+                    &lt;div class=&quot;navbar-header&quot;&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse&quot;&gt;
+                            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                        &lt;/button&gt;
+                        &lt;a href=&quot;/&quot;&gt;&lt;img src=&quot;/images/layout/gmqa_logo.png&quot; alt=&quot;Logo GMQA&quot; width=&quot;197&quot; height=&quot;70&quot; /&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;navbar-collapse collapse &quot;&gt;
+                        
+    &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;/Account/Register&quot;&gt;Register&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;/Account/Login&quot;&gt;Log in&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+                        &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Home/About&quot;&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Home/Contact&quot;&gt;Contato&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Ciclo&quot;&gt;Ciclos&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Risco&quot;&gt;Riscos&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/NivelAcesso&quot;&gt;NÃ­veis de Acesso&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Projeto&quot;&gt;Projeto&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;                  
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr /&gt;
+        &lt;/header&gt;
+
+
+
+        &lt;div class=&quot;container body-content&quot;&gt;
+            
+    &lt;!-- Slider --&gt;
+    &lt;section id=&quot;banner&quot;&gt;
+    &lt;div id=&quot;main-slider&quot; class=&quot;flexslider&quot;&gt;
+        &lt;ul class=&quot;slides&quot;&gt;
+            &lt;li&gt;
+                &lt;img src=&quot;/images/slides/1gestao.jpg&quot; alt=&quot;&quot; /&gt;
+                &lt;div class=&quot;flex-caption&quot;&gt;&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src=&quot;/images/slides/2medicao.jpg&quot; alt=&quot;&quot; /&gt;
+                &lt;div class=&quot;flex-caption&quot;&gt;&lt;/div&gt;
+
+            &lt;li&gt;
+                &lt;img src=&quot;/images/slides/3qualidade.jpg&quot; alt=&quot;&quot; /&gt;
+                &lt;div class=&quot;flex-caption&quot;&gt;&lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;img src=&quot;/images/slides/4artefatos.jpg&quot; alt=&quot;&quot; /&gt;
+                &lt;div class=&quot;flex-caption&quot;&gt;&lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- Slider End --&gt;
+
+
+
+            &lt;hr /&gt;
+            &lt;footer&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-lg-3&quot;&gt;
+                        &lt;div class=&quot;widget&quot;&gt;
+                            &lt;h5 class=&quot;widgetheading&quot;&gt;Nossos Contatos&lt;/h5&gt;
+                            &lt;address&gt;
+                                &lt;strong&gt;GMQA Systems&lt;/strong&gt;&lt;br&gt;
+                                SÃ£o Paulo, SP&lt;br&gt;
+                                Brasil.
+                            &lt;/address&gt;
+                            &lt;p&gt;
+                                &lt;i class=&quot;icon-phone&quot;&gt;&lt;/i&gt; +55 11 1234-5678 &lt;br&gt;
+                                &lt;i class=&quot;icon-envelope-alt&quot;&gt;&lt;/i&gt; gmqa@gmqa.com.br
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-lg-3&quot;&gt;
+                        &lt;div class=&quot;widget&quot;&gt;
+                            &lt;h5 class=&quot;widgetheading&quot;&gt;Links RÃ¡pidos&lt;/h5&gt;
+                            &lt;ul class=&quot;link-list&quot;&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ãšltimos Eventos&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Termos e CondiÃ§Ãµes&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;PolÃ­tica de Privacidade&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Carreira&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contato&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;sub-footer&quot;&gt;
+                &lt;div class=&quot;container&quot;&gt;
+                    &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col-lg-4&quot;&gt;
+                            &lt;div class=&quot;copyright&quot;&gt;
+                                &lt;p&gt;
+                                    &lt;span&gt;&amp;copy; GMQA 2016 - Todos os direitos reservados.&lt;/span&gt;
+                                &lt;/p&gt;
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;col-lg-4&quot;&gt;
+                            &lt;ul class=&quot;social-network&quot;&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Twitter&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Linkedin&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Pinterest&quot;&gt;&lt;i class=&quot;fa fa-pinterest&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Google plus&quot;&gt;&lt;i class=&quot;fa fa-google-plus&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+        &lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;scrollup&quot;&gt;&lt;i class=&quot;fa fa-angle-up active&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;script src=&quot;/js/jquery.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/jquery.easing.1.3.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/jquery.fancybox.pack.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/jquery.fancybox-media.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/portfolio/jquery.quicksand.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/portfolio/setting.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/jquery.flexslider.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/animate.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/custom.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/validator.min.js&quot;&gt;&lt;/script&gt;
+
+
+        
+    
+&lt;!-- Visual Studio Browser Link --&gt;
+&lt;script type=&quot;application/json&quot; id=&quot;__browserLink_initializationData&quot;&gt;
+    {&quot;requestId&quot;:&quot;4b4cda2346b94615ba51aaf948bea688&quot;,&quot;requestMappingFromServer&quot;:false}
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://localhost:1969/aca42cf183804296b1871082cb11c0a0/browserLink&quot; async=&quot;async&quot;&gt;&lt;/script&gt;
+&lt;!-- End Browser Link --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+														<totalSize>7170</totalSize>
+														<timeStamp>2017-03-11 14:40:24</timeStamp>
+														<logContent/>
+													</Response>
+												</ChildItems>
+												<Summary v='3'>
+													<maxResponseTime>0</maxResponseTime>
+													<averageResponseTime>0</averageResponseTime>
+												</Summary>
+											</ResponsesItem>
+											<Request v='10'>
+												<ver>14</ver>
+												<id>6</id>
+												<Summary v='3'>
+													<maxResponseTime>0</maxResponseTime>
+													<averageResponseTime>0</averageResponseTime>
+												</Summary>
+												<childCount>5</childCount>
+												<ChildItems>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>7</id>
+														<name>requestUrl</name>
+														<value>http%3A%2F%2Flocalhost%3A5000%2F</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>8</id>
+														<name>browserName</name>
+														<value/>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>9</id>
+														<name>userAgent</name>
+														<value>Mozilla%2F5.0+%28Windows+NT+6.2%3B+WOW64%3B+Trident%2F7.0%3B+rv%3A11.0%29+like+Gecko</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>10</id>
+														<name>clientProtocol</name>
+														<value>1.3</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>11</id>
+														<name>_</name>
+														<value>1489243223193</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+												</ChildItems>
+												<timeoutEnabled>false</timeoutEnabled>
+												<Object>null</Object>
+												<targetWindow/>
+												<itemName/>
+												<documentation/>
+												<waitForPageToLoad>false</waitForPageToLoad>
+												<sourceLocation/>
+												<recordResponses>true</recordResponses>
+												<quiescenceTimeMs>500</quiescenceTimeMs>
+												<disabled>false</disabled>
+												<ignoreErrors>false</ignoreErrors>
+												<errorFilter/>
+												<Object>null</Object>
+												<host>localhost:1969</host>
+												<path>/aca42cf183804296b1871082cb11c0a0/browserLinkSignalR/negotiate</path>
+												<protocol>http</protocol>
+												<resource/>
+												<targetFrame/>
+												<label/>
+												<headers/>
+												<multipartBoundary/>
+												<Object>null</Object>
+												<lenientSubrequestCount>false</lenientSubrequestCount>
+												<formCharset/>
+												<method>1</method>
+												<waitForSubRequests>false</waitForSubRequests>
+												<executionMode>1</executionMode>
+											</Request>
+										</ChildItems>
+										<timeoutEnabled>false</timeoutEnabled>
+										<Object>null</Object>
+										<targetWindow/>
+										<itemName/>
+										<documentation/>
+										<waitForPageToLoad>false</waitForPageToLoad>
+										<sourceLocation/>
+										<recordResponses>true</recordResponses>
+										<quiescenceTimeMs>500</quiescenceTimeMs>
+										<disabled>false</disabled>
+										<ignoreErrors>false</ignoreErrors>
+										<errorFilter/>
+										<Object>null</Object>
+										<host>localhost:5000</host>
+										<path>/</path>
+										<protocol>http</protocol>
+										<resource/>
+										<targetFrame/>
+										<isActive>1</isActive>
+										<label/>
+										<headers>Referer: file:///C:/Program%20Files%20(x86)/Badboy/html/start.html
+</headers>
+										<multipartBoundary/>
+										<Object>null</Object>
+										<lenientSubrequestCount>false</lenientSubrequestCount>
+										<formCharset>windows-1252</formCharset>
+										<method>1</method>
+										<waitForSubRequests>false</waitForSubRequests>
+									</Request>
+									<Request v='10'>
+										<ver>14</ver>
+										<id>18</id>
+										<Summary v='3'>
+											<played>1</played>
+											<succeeded>1</succeeded>
+											<maxResponseTime>613</maxResponseTime>
+											<averageResponseTime>613</averageResponseTime>
+										</Summary>
+										<childCount>3</childCount>
+										<ChildItems>
+											<ResponsesItem v='4'>
+												<ver>14</ver>
+												<id>32</id>
+												<Summary v='3'>
+													<played>1</played>
+													<succeeded>1</succeeded>
+													<maxResponseTime>613</maxResponseTime>
+													<averageResponseTime>613</averageResponseTime>
+												</Summary>
+												<childCount>1</childCount>
+												<ChildItems>
+													<Response v='3'>
+														<ver>14</ver>
+														<id>31</id>
+														<Summary v='3'>
+															<played>1</played>
+															<succeeded>1</succeeded>
+															<maxResponseTime>613</maxResponseTime>
+															<averageResponseTime>613</averageResponseTime>
+														</Summary>
+														<timeMs>613</timeMs>
+														<size>8914</size>
+														<encodedContent>false</encodedContent>
+														<content>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+        &lt;title&gt;Registrar - GMQA&lt;/title&gt;
+
+        &lt;link href=&quot;/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+        &lt;link href=&quot;/css/fancybox/jquery.fancybox.css&quot; rel=&quot;stylesheet&quot;&gt;
+        &lt;link href=&quot;/css/jcarousel.css&quot; rel=&quot;stylesheet&quot; /&gt;
+        &lt;link href=&quot;/css/flexslider.css&quot; rel=&quot;stylesheet&quot; /&gt;
+        &lt;link href=&quot;/js/owl-carousel/owl.carousel.css&quot; rel=&quot;stylesheet&quot;&gt;
+        &lt;link href=&quot;/css/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+
+
+        
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;div class=&quot;navbar navbar-default navbar-static-top&quot;&gt;
+                &lt;div class=&quot;container&quot;&gt;
+                    &lt;div class=&quot;navbar-header&quot;&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse&quot;&gt;
+                            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                        &lt;/button&gt;
+                        &lt;a href=&quot;/&quot;&gt;&lt;img src=&quot;/images/layout/gmqa_logo.png&quot; alt=&quot;Logo GMQA&quot; width=&quot;197&quot; height=&quot;70&quot; /&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;navbar-collapse collapse &quot;&gt;
+                        
+    &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;/Account/Register&quot;&gt;Register&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;/Account/Login&quot;&gt;Log in&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+                        &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Home/About&quot;&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Home/Contact&quot;&gt;Contato&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Ciclo&quot;&gt;Ciclos&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Risco&quot;&gt;Riscos&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/NivelAcesso&quot;&gt;NÃ­veis de Acesso&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Projeto&quot;&gt;Projeto&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;                  
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr /&gt;
+        &lt;/header&gt;
+
+
+
+        &lt;div class=&quot;container body-content&quot;&gt;
+            
+&lt;h2&gt;Registrar.&lt;/h2&gt;
+
+&lt;form method=&quot;post&quot; class=&quot;form-horizontal&quot; role=&quot;form&quot; action=&quot;/Account/Register&quot;&gt;
+    &lt;h4&gt;Create a new account.&lt;/h4&gt;
+    &lt;hr /&gt;
+    &lt;div class=&quot;text-danger validation-summary-valid&quot; data-valmsg-summary=&quot;true&quot;&gt;&lt;ul&gt;&lt;li style=&quot;display:none&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label class=&quot;col-md-2 control-label&quot; for=&quot;Email&quot;&gt;Email&lt;/label&gt;
+        &lt;div class=&quot;col-md-10&quot;&gt;
+            &lt;input class=&quot;form-control&quot; type=&quot;email&quot; data-val=&quot;true&quot; data-val-email=&quot;O campo Email n&amp;#xE3;o &amp;#xE9; um endere&amp;#xE7;o de email v&amp;#xE1;lido.&quot; data-val-required=&quot;O campo Email &amp;#xE9; obrigat&amp;#xF3;rio.&quot; id=&quot;Email&quot; name=&quot;Email&quot; value=&quot;&quot; /&gt;
+            &lt;span class=&quot;text-danger field-validation-valid&quot; data-valmsg-for=&quot;Email&quot; data-valmsg-replace=&quot;true&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label class=&quot;col-md-2 control-label&quot; for=&quot;Password&quot;&gt;Password&lt;/label&gt;
+        &lt;div class=&quot;col-md-10&quot;&gt;
+            &lt;input class=&quot;form-control&quot; type=&quot;password&quot; data-val=&quot;true&quot; data-val-length=&quot;The Password must be at least 6 characters long.&quot; data-val-length-max=&quot;100&quot; data-val-length-min=&quot;6&quot; data-val-required=&quot;O campo Password &amp;#xE9; obrigat&amp;#xF3;rio.&quot; id=&quot;Password&quot; name=&quot;Password&quot; /&gt;
+            &lt;span class=&quot;text-danger field-validation-valid&quot; data-valmsg-for=&quot;Password&quot; data-valmsg-replace=&quot;true&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label class=&quot;col-md-2 control-label&quot; for=&quot;ConfirmPassword&quot;&gt;Confirm password&lt;/label&gt;
+        &lt;div class=&quot;col-md-10&quot;&gt;
+            &lt;input class=&quot;form-control&quot; type=&quot;password&quot; data-val=&quot;true&quot; data-val-equalto=&quot;The password and confirmation password do not match.&quot; data-val-equalto-other=&quot;*.Password&quot; id=&quot;ConfirmPassword&quot; name=&quot;ConfirmPassword&quot; /&gt;
+            &lt;span class=&quot;text-danger field-validation-valid&quot; data-valmsg-for=&quot;ConfirmPassword&quot; data-valmsg-replace=&quot;true&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;div class=&quot;col-md-offset-2 col-md-10&quot;&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Register&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;input name=&quot;__RequestVerificationToken&quot; type=&quot;hidden&quot; value=&quot;CfDJ8Hz3vEvqSrJOsKFLHhp0CfbaUele8qq4ZyicEnkUz4Mt8Z8PHhc-W8Za8FoNOayzP4hiJM7N6GUqj0xkp6SEHYE-orGYkZyHTkk8OCXAGVax4CjYBNmR22ejwwIJTrwkospQh0W9-R9mjSR3noGSX9k&quot; /&gt;&lt;/form&gt;
+
+
+            &lt;hr /&gt;
+            &lt;footer&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-lg-3&quot;&gt;
+                        &lt;div class=&quot;widget&quot;&gt;
+                            &lt;h5 class=&quot;widgetheading&quot;&gt;Nossos Contatos&lt;/h5&gt;
+                            &lt;address&gt;
+                                &lt;strong&gt;GMQA Systems&lt;/strong&gt;&lt;br&gt;
+                                SÃ£o Paulo, SP&lt;br&gt;
+                                Brasil.
+                            &lt;/address&gt;
+                            &lt;p&gt;
+                                &lt;i class=&quot;icon-phone&quot;&gt;&lt;/i&gt; +55 11 1234-5678 &lt;br&gt;
+                                &lt;i class=&quot;icon-envelope-alt&quot;&gt;&lt;/i&gt; gmqa@gmqa.com.br
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-lg-3&quot;&gt;
+                        &lt;div class=&quot;widget&quot;&gt;
+                            &lt;h5 class=&quot;widgetheading&quot;&gt;Links RÃ¡pidos&lt;/h5&gt;
+                            &lt;ul class=&quot;link-list&quot;&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ãšltimos Eventos&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Termos e CondiÃ§Ãµes&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;PolÃ­tica de Privacidade&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Carreira&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contato&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;sub-footer&quot;&gt;
+                &lt;div class=&quot;container&quot;&gt;
+                    &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col-lg-4&quot;&gt;
+                            &lt;div class=&quot;copyright&quot;&gt;
+                                &lt;p&gt;
+                                    &lt;span&gt;&amp;copy; GMQA 2016 - Todos os direitos reservados.&lt;/span&gt;
+                                &lt;/p&gt;
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;col-lg-4&quot;&gt;
+                            &lt;ul class=&quot;social-network&quot;&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Twitter&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Linkedin&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Pinterest&quot;&gt;&lt;i class=&quot;fa fa-pinterest&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Google plus&quot;&gt;&lt;i class=&quot;fa fa-google-plus&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+        &lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;scrollup&quot;&gt;&lt;i class=&quot;fa fa-angle-up active&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;script src=&quot;/js/jquery.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/jquery.easing.1.3.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/jquery.fancybox.pack.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/jquery.fancybox-media.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/portfolio/jquery.quicksand.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/portfolio/setting.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/jquery.flexslider.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/animate.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/custom.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/validator.min.js&quot;&gt;&lt;/script&gt;
+
+
+        
+
+    &lt;script src=&quot;/lib/jquery-validation/dist/jquery.validate.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js&quot;&gt;&lt;/script&gt;
+
+
+
+    
+&lt;!-- Visual Studio Browser Link --&gt;
+&lt;script type=&quot;application/json&quot; id=&quot;__browserLink_initializationData&quot;&gt;
+    {&quot;requestId&quot;:&quot;afadb8ff13484c99b1325798d904c449&quot;,&quot;requestMappingFromServer&quot;:false}
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://localhost:1969/aca42cf183804296b1871082cb11c0a0/browserLink&quot; async=&quot;async&quot;&gt;&lt;/script&gt;
+&lt;!-- End Browser Link --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+														<totalSize>8914</totalSize>
+														<timeStamp>2017-03-11 14:40:42</timeStamp>
+														<logContent/>
+													</Response>
+												</ChildItems>
+												<Summary v='3'>
+													<maxResponseTime>0</maxResponseTime>
+													<averageResponseTime>0</averageResponseTime>
+												</Summary>
+											</ResponsesItem>
+											<Request v='10'>
+												<ver>14</ver>
+												<id>19</id>
+												<Summary v='3'>
+													<maxResponseTime>0</maxResponseTime>
+													<averageResponseTime>0</averageResponseTime>
+												</Summary>
+												<childCount>5</childCount>
+												<ChildItems>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>20</id>
+														<name>transport</name>
+														<value>webSockets</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>21</id>
+														<name>connectionToken</name>
+														<value>AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAAmZ6AQ6mE%2Bk%2B532Ufp7hUoAAAAAACAAAAAAAQZgAAAAEAACAAAACiNSDBfQcweZ7PsSVhISMU1M6CTY84FvzHXgVRy2TPZAAAAAAOgAAAAAIAACAAAADEf9vrEqgRGZOXDek%2BL0XUUNeWPncG%2F99UaBUgqZakAzAAAAC52LLAZTx8qQTf9eXEFqoM2%2F8nYQ9tQZOrXB3qoeECIqvdvVj%2BZ2IDX%2Fq8QUYyKPJAAAAAoBVdw2bU%2BTrywAIEzRK5HszvIRw2uN8wwhvGlQVejWnRivcsqDOtU7unHzb3ZJcwW1IHD4dSoQtqIzaRN9zEKQ%3D%3D</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>22</id>
+														<name>requestUrl</name>
+														<value>http%3A%2F%2Flocalhost%3A5000%2F</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>23</id>
+														<name>browserName</name>
+														<value/>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>24</id>
+														<name>userAgent</name>
+														<value>Mozilla%2F5.0+%28Windows+NT+6.2%3B+WOW64%3B+Trident%2F7.0%3B+rv%3A11.0%29+like+Gecko</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+												</ChildItems>
+												<timeoutEnabled>false</timeoutEnabled>
+												<Object>null</Object>
+												<targetWindow/>
+												<itemName/>
+												<documentation/>
+												<waitForPageToLoad>false</waitForPageToLoad>
+												<sourceLocation/>
+												<recordResponses>true</recordResponses>
+												<quiescenceTimeMs>500</quiescenceTimeMs>
+												<disabled>false</disabled>
+												<ignoreErrors>false</ignoreErrors>
+												<errorFilter/>
+												<Object>null</Object>
+												<host>localhost:1969</host>
+												<path>/aca42cf183804296b1871082cb11c0a0/browserLinkSignalR/abort</path>
+												<protocol>http</protocol>
+												<resource/>
+												<targetFrame/>
+												<label/>
+												<headers/>
+												<multipartBoundary/>
+												<Object>null</Object>
+												<lenientSubrequestCount>false</lenientSubrequestCount>
+												<formCharset/>
+												<method>1</method>
+												<waitForSubRequests>false</waitForSubRequests>
+												<executionMode>1</executionMode>
+											</Request>
+											<Request v='10'>
+												<ver>14</ver>
+												<id>25</id>
+												<Summary v='3'>
+													<maxResponseTime>0</maxResponseTime>
+													<averageResponseTime>0</averageResponseTime>
+												</Summary>
+												<childCount>5</childCount>
+												<ChildItems>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>26</id>
+														<name>requestUrl</name>
+														<value>http%3A%2F%2Flocalhost%3A5000%2FAccount%2FRegister</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>27</id>
+														<name>browserName</name>
+														<value/>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>28</id>
+														<name>userAgent</name>
+														<value>Mozilla%2F5.0+%28Windows+NT+6.2%3B+WOW64%3B+Trident%2F7.0%3B+rv%3A11.0%29+like+Gecko</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>29</id>
+														<name>clientProtocol</name>
+														<value>1.3</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>30</id>
+														<name>_</name>
+														<value>1489243241229</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+												</ChildItems>
+												<timeoutEnabled>false</timeoutEnabled>
+												<Object>null</Object>
+												<targetWindow/>
+												<itemName/>
+												<documentation/>
+												<waitForPageToLoad>false</waitForPageToLoad>
+												<sourceLocation/>
+												<recordResponses>true</recordResponses>
+												<quiescenceTimeMs>500</quiescenceTimeMs>
+												<disabled>false</disabled>
+												<ignoreErrors>false</ignoreErrors>
+												<errorFilter/>
+												<Object>null</Object>
+												<host>localhost:1969</host>
+												<path>/aca42cf183804296b1871082cb11c0a0/browserLinkSignalR/negotiate</path>
+												<protocol>http</protocol>
+												<resource/>
+												<targetFrame/>
+												<label/>
+												<headers/>
+												<multipartBoundary/>
+												<Object>null</Object>
+												<lenientSubrequestCount>false</lenientSubrequestCount>
+												<formCharset/>
+												<method>1</method>
+												<waitForSubRequests>false</waitForSubRequests>
+												<executionMode>1</executionMode>
+											</Request>
+										</ChildItems>
+										<timeoutEnabled>false</timeoutEnabled>
+										<Object>null</Object>
+										<targetWindow/>
+										<itemName/>
+										<documentation/>
+										<waitForPageToLoad>false</waitForPageToLoad>
+										<sourceLocation/>
+										<recordResponses>true</recordResponses>
+										<quiescenceTimeMs>500</quiescenceTimeMs>
+										<disabled>false</disabled>
+										<ignoreErrors>false</ignoreErrors>
+										<errorFilter/>
+										<Object>null</Object>
+										<host>localhost:5000</host>
+										<path>/Account/Register</path>
+										<protocol>http</protocol>
+										<resource/>
+										<targetFrame/>
+										<isActive>1</isActive>
+										<label/>
+										<headers>Referer: http://localhost:5000/
+</headers>
+										<multipartBoundary/>
+										<Object>null</Object>
+										<lenientSubrequestCount>false</lenientSubrequestCount>
+										<formCharset>utf-8</formCharset>
+										<method>1</method>
+										<waitForSubRequests>false</waitForSubRequests>
+									</Request>
+									<Request v='10'>
+										<ver>14</ver>
+										<id>43</id>
+										<Summary v='3'>
+											<played>1</played>
+											<succeeded>1</succeeded>
+											<maxResponseTime>1382</maxResponseTime>
+											<averageResponseTime>1382</averageResponseTime>
+										</Summary>
+										<childCount>8</childCount>
+										<ChildItems>
+											<ResponsesItem v='4'>
+												<ver>14</ver>
+												<id>62</id>
+												<Summary v='3'>
+													<played>1</played>
+													<succeeded>1</succeeded>
+													<maxResponseTime>1382</maxResponseTime>
+													<averageResponseTime>1382</averageResponseTime>
+												</Summary>
+												<childCount>1</childCount>
+												<ChildItems>
+													<Response v='3'>
+														<ver>14</ver>
+														<id>61</id>
+														<Summary v='3'>
+															<played>1</played>
+															<succeeded>1</succeeded>
+															<maxResponseTime>1382</maxResponseTime>
+															<averageResponseTime>1382</averageResponseTime>
+														</Summary>
+														<timeMs>1382</timeMs>
+														<size>7695</size>
+														<encodedContent>false</encodedContent>
+														<content>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+        &lt;title&gt;Home Page - GMQA&lt;/title&gt;
+
+        &lt;link href=&quot;/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+        &lt;link href=&quot;/css/fancybox/jquery.fancybox.css&quot; rel=&quot;stylesheet&quot;&gt;
+        &lt;link href=&quot;/css/jcarousel.css&quot; rel=&quot;stylesheet&quot; /&gt;
+        &lt;link href=&quot;/css/flexslider.css&quot; rel=&quot;stylesheet&quot; /&gt;
+        &lt;link href=&quot;/js/owl-carousel/owl.carousel.css&quot; rel=&quot;stylesheet&quot;&gt;
+        &lt;link href=&quot;/css/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+
+
+        
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;div class=&quot;navbar navbar-default navbar-static-top&quot;&gt;
+                &lt;div class=&quot;container&quot;&gt;
+                    &lt;div class=&quot;navbar-header&quot;&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse&quot;&gt;
+                            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                        &lt;/button&gt;
+                        &lt;a href=&quot;/&quot;&gt;&lt;img src=&quot;/images/layout/gmqa_logo.png&quot; alt=&quot;Logo GMQA&quot; width=&quot;197&quot; height=&quot;70&quot; /&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;navbar-collapse collapse &quot;&gt;
+                        
+    &lt;form method=&quot;post&quot; id=&quot;logoutForm&quot; class=&quot;navbar-right&quot; action=&quot;/Account/LogOff&quot;&gt;
+        &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+            &lt;li&gt;
+                &lt;a title=&quot;Manage&quot; href=&quot;/Manage&quot;&gt;Hello gerentedeprojetos@hotmail.com!&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-link navbar-btn navbar-link&quot;&gt;Log off&lt;/button&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;input name=&quot;__RequestVerificationToken&quot; type=&quot;hidden&quot; value=&quot;CfDJ8Hz3vEvqSrJOsKFLHhp0Cfbt4LRpEbHgBPB3RqrZgrzMrJDtc7a31O_br0qNTw55qsu-qbKccKPQnSxnvSRZzDOHtlqKW2h9tv2cST5GdvGljMB_0I94069FYQakqCTdJkrk4IINC-qx9c8uIzOHT9A-Upj4fnmE-oRYzvUeePdvdA5R03h_DnQ0WChch_Au4Q&quot; /&gt;&lt;/form&gt;
+
+                        &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+                            &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Home/About&quot;&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Home/Contact&quot;&gt;Contato&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Ciclo&quot;&gt;Ciclos&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Risco&quot;&gt;Riscos&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/NivelAcesso&quot;&gt;NÃ­veis de Acesso&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/Projeto&quot;&gt;Projeto&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;                  
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr /&gt;
+        &lt;/header&gt;
+
+
+
+        &lt;div class=&quot;container body-content&quot;&gt;
+            
+    &lt;!-- Slider --&gt;
+    &lt;section id=&quot;banner&quot;&gt;
+    &lt;div id=&quot;main-slider&quot; class=&quot;flexslider&quot;&gt;
+        &lt;ul class=&quot;slides&quot;&gt;
+            &lt;li&gt;
+                &lt;img src=&quot;/images/slides/1gestao.jpg&quot; alt=&quot;&quot; /&gt;
+                &lt;div class=&quot;flex-caption&quot;&gt;&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src=&quot;/images/slides/2medicao.jpg&quot; alt=&quot;&quot; /&gt;
+                &lt;div class=&quot;flex-caption&quot;&gt;&lt;/div&gt;
+
+            &lt;li&gt;
+                &lt;img src=&quot;/images/slides/3qualidade.jpg&quot; alt=&quot;&quot; /&gt;
+                &lt;div class=&quot;flex-caption&quot;&gt;&lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;img src=&quot;/images/slides/4artefatos.jpg&quot; alt=&quot;&quot; /&gt;
+                &lt;div class=&quot;flex-caption&quot;&gt;&lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- Slider End --&gt;
+
+
+
+            &lt;hr /&gt;
+            &lt;footer&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-lg-3&quot;&gt;
+                        &lt;div class=&quot;widget&quot;&gt;
+                            &lt;h5 class=&quot;widgetheading&quot;&gt;Nossos Contatos&lt;/h5&gt;
+                            &lt;address&gt;
+                                &lt;strong&gt;GMQA Systems&lt;/strong&gt;&lt;br&gt;
+                                SÃ£o Paulo, SP&lt;br&gt;
+                                Brasil.
+                            &lt;/address&gt;
+                            &lt;p&gt;
+                                &lt;i class=&quot;icon-phone&quot;&gt;&lt;/i&gt; +55 11 1234-5678 &lt;br&gt;
+                                &lt;i class=&quot;icon-envelope-alt&quot;&gt;&lt;/i&gt; gmqa@gmqa.com.br
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;col-lg-3&quot;&gt;
+                        &lt;div class=&quot;widget&quot;&gt;
+                            &lt;h5 class=&quot;widgetheading&quot;&gt;Links RÃ¡pidos&lt;/h5&gt;
+                            &lt;ul class=&quot;link-list&quot;&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Ãšltimos Eventos&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Termos e CondiÃ§Ãµes&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;PolÃ­tica de Privacidade&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Carreira&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contato&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;sub-footer&quot;&gt;
+                &lt;div class=&quot;container&quot;&gt;
+                    &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col-lg-4&quot;&gt;
+                            &lt;div class=&quot;copyright&quot;&gt;
+                                &lt;p&gt;
+                                    &lt;span&gt;&amp;copy; GMQA 2016 - Todos os direitos reservados.&lt;/span&gt;
+                                &lt;/p&gt;
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;col-lg-4&quot;&gt;
+                            &lt;ul class=&quot;social-network&quot;&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Facebook&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Twitter&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Linkedin&quot;&gt;&lt;i class=&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Pinterest&quot;&gt;&lt;i class=&quot;fa fa-pinterest&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot; data-placement=&quot;top&quot; title=&quot;Google plus&quot;&gt;&lt;i class=&quot;fa fa-google-plus&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+        &lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;scrollup&quot;&gt;&lt;i class=&quot;fa fa-angle-up active&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;script src=&quot;/js/jquery.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/jquery.easing.1.3.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/jquery.fancybox.pack.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/jquery.fancybox-media.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/portfolio/jquery.quicksand.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/portfolio/setting.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/jquery.flexslider.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/animate.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/custom.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;/js/validator.min.js&quot;&gt;&lt;/script&gt;
+
+
+        
+    
+&lt;!-- Visual Studio Browser Link --&gt;
+&lt;script type=&quot;application/json&quot; id=&quot;__browserLink_initializationData&quot;&gt;
+    {&quot;requestId&quot;:&quot;bb3109589a894fb09d9a94e8447b18e3&quot;,&quot;requestMappingFromServer&quot;:false}
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://localhost:1969/aca42cf183804296b1871082cb11c0a0/browserLink&quot; async=&quot;async&quot;&gt;&lt;/script&gt;
+&lt;!-- End Browser Link --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+														<totalSize>7695</totalSize>
+														<timeStamp>2017-03-11 14:41:26</timeStamp>
+														<logContent/>
+													</Response>
+												</ChildItems>
+												<Summary v='3'>
+													<maxResponseTime>0</maxResponseTime>
+													<averageResponseTime>0</averageResponseTime>
+												</Summary>
+											</ResponsesItem>
+											<Parameter v='4'>
+												<ver>14</ver>
+												<id>44</id>
+												<name>Email</name>
+												<value>gerentedeprojetos@hotmail.com</value>
+												<sendEquals>true</sendEquals>
+												<method>2</method>
+											</Parameter>
+											<Parameter v='4'>
+												<ver>14</ver>
+												<id>45</id>
+												<name>Password</name>
+												<value>Gerente12%23</value>
+												<sendEquals>true</sendEquals>
+												<method>2</method>
+											</Parameter>
+											<Parameter v='4'>
+												<ver>14</ver>
+												<id>46</id>
+												<name>ConfirmPassword</name>
+												<value>Gerente12%23</value>
+												<sendEquals>true</sendEquals>
+												<method>2</method>
+											</Parameter>
+											<Parameter v='4'>
+												<ver>14</ver>
+												<id>47</id>
+												<name>__RequestVerificationToken</name>
+												<value>CfDJ8Hz3vEvqSrJOsKFLHhp0CfbaUele8qq4ZyicEnkUz4Mt8Z8PHhc-W8Za8FoNOayzP4hiJM7N6GUqj0xkp6SEHYE-orGYkZyHTkk8OCXAGVax4CjYBNmR22ejwwIJTrwkospQh0W9-R9mjSR3noGSX9k</value>
+												<sendEquals>true</sendEquals>
+												<method>2</method>
+											</Parameter>
+											<Request v='10'>
+												<ver>14</ver>
+												<id>48</id>
+												<Summary v='3'>
+													<maxResponseTime>0</maxResponseTime>
+													<averageResponseTime>0</averageResponseTime>
+												</Summary>
+												<timeoutEnabled>false</timeoutEnabled>
+												<Object>null</Object>
+												<targetWindow/>
+												<itemName/>
+												<documentation/>
+												<waitForPageToLoad>false</waitForPageToLoad>
+												<sourceLocation/>
+												<recordResponses>true</recordResponses>
+												<quiescenceTimeMs>500</quiescenceTimeMs>
+												<disabled>false</disabled>
+												<ignoreErrors>false</ignoreErrors>
+												<errorFilter/>
+												<Object>null</Object>
+												<host>localhost:5000</host>
+												<path>/</path>
+												<protocol>http</protocol>
+												<resource/>
+												<targetFrame/>
+												<label/>
+												<headers>Referer: http://localhost:5000/Account/Register
+Content-Type: application/x-www-form-urlencoded</headers>
+												<multipartBoundary/>
+												<Object>null</Object>
+												<lenientSubrequestCount>false</lenientSubrequestCount>
+												<formCharset/>
+												<method>1</method>
+												<waitForSubRequests>false</waitForSubRequests>
+												<executionMode>2</executionMode>
+											</Request>
+											<Request v='10'>
+												<ver>14</ver>
+												<id>49</id>
+												<Summary v='3'>
+													<maxResponseTime>0</maxResponseTime>
+													<averageResponseTime>0</averageResponseTime>
+												</Summary>
+												<childCount>5</childCount>
+												<ChildItems>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>50</id>
+														<name>transport</name>
+														<value>webSockets</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>51</id>
+														<name>connectionToken</name>
+														<value>AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAAmZ6AQ6mE%2Bk%2B532Ufp7hUoAAAAAACAAAAAAAQZgAAAAEAACAAAABa0eJcjsowsvNSn%2BVRMbJ1B3D6oXGqsIFhs70yAogCsQAAAAAOgAAAAAIAACAAAAB6001gXqRsrC4tpTHhVeWBMnjdD8C2HQYdja7UWFOWWDAAAAC7Xs7qE4VwHwSVcJ0MeP1x9H%2BC1xxuyXkFazbG5gKPhaRmoeXmCXRhtDqcjcw0tK1AAAAAhrnKb86rVqoyu%2BjJlK3TA3ZyPf4STnRfr6dKMbgwqrBIBdNJDZlBDLtQ1Yb%2BtAH7qMnI6Masg42V73OINO0CNg%3D%3D</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>52</id>
+														<name>requestUrl</name>
+														<value>http%3A%2F%2Flocalhost%3A5000%2FAccount%2FRegister</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>53</id>
+														<name>browserName</name>
+														<value/>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>54</id>
+														<name>userAgent</name>
+														<value>Mozilla%2F5.0+%28Windows+NT+6.2%3B+WOW64%3B+Trident%2F7.0%3B+rv%3A11.0%29+like+Gecko</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+												</ChildItems>
+												<timeoutEnabled>false</timeoutEnabled>
+												<Object>null</Object>
+												<targetWindow/>
+												<itemName/>
+												<documentation/>
+												<waitForPageToLoad>false</waitForPageToLoad>
+												<sourceLocation/>
+												<recordResponses>true</recordResponses>
+												<quiescenceTimeMs>500</quiescenceTimeMs>
+												<disabled>false</disabled>
+												<ignoreErrors>false</ignoreErrors>
+												<errorFilter/>
+												<Object>null</Object>
+												<host>localhost:1969</host>
+												<path>/aca42cf183804296b1871082cb11c0a0/browserLinkSignalR/abort</path>
+												<protocol>http</protocol>
+												<resource/>
+												<targetFrame/>
+												<label/>
+												<headers/>
+												<multipartBoundary/>
+												<Object>null</Object>
+												<lenientSubrequestCount>false</lenientSubrequestCount>
+												<formCharset/>
+												<method>1</method>
+												<waitForSubRequests>false</waitForSubRequests>
+												<executionMode>1</executionMode>
+											</Request>
+											<Request v='10'>
+												<ver>14</ver>
+												<id>55</id>
+												<Summary v='3'>
+													<maxResponseTime>0</maxResponseTime>
+													<averageResponseTime>0</averageResponseTime>
+												</Summary>
+												<childCount>5</childCount>
+												<ChildItems>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>56</id>
+														<name>requestUrl</name>
+														<value>http%3A%2F%2Flocalhost%3A5000%2F</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>57</id>
+														<name>browserName</name>
+														<value/>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>58</id>
+														<name>userAgent</name>
+														<value>Mozilla%2F5.0+%28Windows+NT+6.2%3B+WOW64%3B+Trident%2F7.0%3B+rv%3A11.0%29+like+Gecko</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>59</id>
+														<name>clientProtocol</name>
+														<value>1.3</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+													<Parameter v='4'>
+														<ver>14</ver>
+														<id>60</id>
+														<name>_</name>
+														<value>1489243285240</value>
+														<sendEquals>true</sendEquals>
+														<method>1</method>
+													</Parameter>
+												</ChildItems>
+												<timeoutEnabled>false</timeoutEnabled>
+												<Object>null</Object>
+												<targetWindow/>
+												<itemName/>
+												<documentation/>
+												<waitForPageToLoad>false</waitForPageToLoad>
+												<sourceLocation/>
+												<recordResponses>true</recordResponses>
+												<quiescenceTimeMs>500</quiescenceTimeMs>
+												<disabled>false</disabled>
+												<ignoreErrors>false</ignoreErrors>
+												<errorFilter/>
+												<Object>null</Object>
+												<host>localhost:1969</host>
+												<path>/aca42cf183804296b1871082cb11c0a0/browserLinkSignalR/negotiate</path>
+												<protocol>http</protocol>
+												<resource/>
+												<targetFrame/>
+												<label/>
+												<headers/>
+												<multipartBoundary/>
+												<Object>null</Object>
+												<lenientSubrequestCount>false</lenientSubrequestCount>
+												<formCharset/>
+												<method>1</method>
+												<waitForSubRequests>false</waitForSubRequests>
+												<executionMode>1</executionMode>
+											</Request>
+										</ChildItems>
+										<timeoutEnabled>false</timeoutEnabled>
+										<Object>null</Object>
+										<targetWindow/>
+										<itemName/>
+										<documentation/>
+										<waitForPageToLoad>false</waitForPageToLoad>
+										<sourceLocation/>
+										<recordResponses>true</recordResponses>
+										<quiescenceTimeMs>500</quiescenceTimeMs>
+										<disabled>false</disabled>
+										<ignoreErrors>false</ignoreErrors>
+										<errorFilter/>
+										<Object>null</Object>
+										<host>localhost:5000</host>
+										<path>/Account/Register</path>
+										<protocol>http</protocol>
+										<resource/>
+										<targetFrame/>
+										<isActive>1</isActive>
+										<label/>
+										<headers>Referer: http://localhost:5000/Account/Register
+Content-Type: application/x-www-form-urlencoded
+</headers>
+										<multipartBoundary/>
+										<Object>null</Object>
+										<lenientSubrequestCount>false</lenientSubrequestCount>
+										<formCharset>utf-8</formCharset>
+										<method>1</method>
+										<waitForSubRequests>false</waitForSubRequests>
+									</Request>
+								</ChildItems>
+								<timeoutEnabled>false</timeoutEnabled>
+								<Object>null</Object>
+								<targetWindow/>
+								<itemName/>
+								<documentation/>
+								<waitForPageToLoad>false</waitForPageToLoad>
+								<sourceLocation/>
+								<recordResponses>true</recordResponses>
+								<quiescenceTimeMs>500</quiescenceTimeMs>
+								<disabled>false</disabled>
+								<ignoreErrors>false</ignoreErrors>
+								<errorFilter/>
+								<Object>null</Object>
+								<name>Step 1</name>
+								<repetitions>1</repetitions>
+								<repeatType>1</repeatType>
+								<repeatVariable/>
+								<incrementAutomatically>true</incrementAutomatically>
+								<incrementAll>true</incrementAll>
+								<expanded>1</expanded>
+							</Step>
+						</ChildItems>
+						<timeoutEnabled>false</timeoutEnabled>
+						<Object>null</Object>
+						<targetWindow/>
+						<itemName/>
+						<documentation/>
+						<waitForPageToLoad>false</waitForPageToLoad>
+						<sourceLocation/>
+						<recordResponses>true</recordResponses>
+						<quiescenceTimeMs>500</quiescenceTimeMs>
+						<disabled>false</disabled>
+						<ignoreErrors>false</ignoreErrors>
+						<errorFilter/>
+						<Object>null</Object>
+						<title>Test 1</title>
+						<template/>
+						<expanded>1</expanded>
+					</TestItem>
+				</ChildItems>
+				<timeoutEnabled>false</timeoutEnabled>
+				<Object>null</Object>
+				<targetWindow/>
+				<itemName>Test Suite 1</itemName>
+				<documentation/>
+				<waitForPageToLoad>false</waitForPageToLoad>
+				<sourceLocation/>
+				<recordResponses>true</recordResponses>
+				<quiescenceTimeMs>500</quiescenceTimeMs>
+				<disabled>false</disabled>
+				<ignoreErrors>false</ignoreErrors>
+				<errorFilter/>
+				<Object>null</Object>
+				<expanded>1</expanded>
+			</SuiteItem>
+		</ChildItems>
+		<defaultHeaders>User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept: image/gif, image/jpeg, image/pjpeg, application/x-ms-application, application/xaml+xml, application/x-ms-xbap, */*
+Accept-Language: pt-BR
+</defaultHeaders>
+		<itemName>Teste_01.0.bx</itemName>
+		<documentation/>
+	</Script>
+</WebScript>
