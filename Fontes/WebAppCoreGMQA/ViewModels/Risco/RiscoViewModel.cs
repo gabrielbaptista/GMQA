@@ -45,9 +45,40 @@ namespace WebAppCoreGMQA.ViewModels.Risco
         [Required]
         [Display(Name = "Responsavel pela Ação")]
         public string ResponsavelAcao { get; set; }
-        
+
         [Required]
         [Display(Name = "Status")]
         public int Status { get; set; }
+    }
+
+    public enum EnumRiscoEfeito
+    {
+        Catastroficos = 0,
+        Serios = 1,
+        Toleraveis = 2,
+        Insignificantes = 3
+    }
+
+    public enum EnumCategoria
+    {
+        Tecnologia = 0,
+        Equipe = 1,
+        Organizacionais = 2,
+        Ferramentas = 3,
+        Estimativa = 4
+    }
+
+    public enum Status
+    {
+        EmAndamento = 0,
+        Sanado = 1,
+        Mitigado = 2
+    }
+
+    public enum EnumProbabilidadeOcorrencia
+    {
+        Alta = 0,
+        Media = 1,
+        Baixa = 2
     }
 }
