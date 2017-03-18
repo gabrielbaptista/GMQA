@@ -17,7 +17,27 @@ namespace WebAppCoreGMQA.Controllers
         // GET: Ciclo
         public IActionResult Index()
         {
-            return View(_context.CicloViewModel.ToList());
+
+            var ciclos = from c in _context.CicloViewModel
+                         join p in _context.ProjetoViewModel on c.IdProjeto equals p.IdProjeto
+                         join e in _context.EtapaViewModel on c.IdEtapas equals e.IdEtapas
+                         select new CicloViewModel
+                         {
+                             DataFim = c.DataFim,
+                             EtapaDesc = e.Descricao,
+                             IdEtapas = c.IdEtapas,
+                             DataInicio = c.DataInicio,
+                             FaseCiclo = c.FaseCiclo,
+                             IdCiclos = c.IdCiclos,
+                             NumeroCiclo = c.NumeroCiclo,
+                             IdProjeto = c.IdProjeto,
+                             ProjetoDesc = p.Nome
+
+                         };
+
+            var cicloViewModel = ciclos.OrderBy(a => a.ProjetoDesc).ToList();
+
+            return View(cicloViewModel);
         }
 
         // GET: Ciclo/Details/5

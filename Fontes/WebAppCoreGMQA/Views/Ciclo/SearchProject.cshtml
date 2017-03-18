@@ -6,6 +6,8 @@
 <table id="tableSearch" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
         <tr>
+            <th>@Html.DisplayNameFor(model => model.ProjetoDesc)</th>
+            <th>@Html.DisplayNameFor(model => model.EtapaDesc)</th>
             <th>@Html.DisplayNameFor(model => model.DataInicio)</th>
             <th>@Html.DisplayNameFor(model => model.DataFim)</th>
             <th>@Html.DisplayNameFor(model => model.FaseCiclo)</th>
@@ -17,6 +19,8 @@
         @foreach (var item in Model)
         {
             <tr>
+                <td>@Html.DisplayFor(modelItem => item.ProjetoDesc)</td>
+                <td>@Html.DisplayFor(modelItem => item.EtapaDesc)</td>
                 <td>@Html.DisplayFor(modelItem => item.DataInicio)</td>
                 <td>@Html.DisplayFor(modelItem => item.DataFim)</td>
                 <td>@Html.DisplayFor(modelItem => item.FaseCiclo)</td>
@@ -49,7 +53,7 @@
                     "infoEmpty": "Nenhum registro encontrado",
                     "infoFiltered": "(Filtrado de  _MAX_ registros no Total)",
                     "search": "Pesquisa:",
-                    "Next":"Proximo"
+                    "Next": "Proximo"
                 }
             }
             );
@@ -68,8 +72,7 @@
         },
 
        function () {
-           swal("Excluido!", "Item excluido com sucesso.", "success");
-           window.location.href = "@Url.Action("DeleteConfirmed", "Ciclo")" +"/"+ id ;
+           window.location.href = "@Url.Action("DeleteConfirmed", "Ciclo")" + "/" + id;
        });
     }
 </script>

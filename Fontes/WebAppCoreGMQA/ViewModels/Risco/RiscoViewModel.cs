@@ -53,32 +53,32 @@ namespace WebAppCoreGMQA.ViewModels.Risco
 
     public enum EnumRiscoEfeito
     {
-        Catastroficos = 0,
-        Serios = 1,
-        Toleraveis = 2,
-        Insignificantes = 3
+        Catastroficos = 1,
+        Serios = 2,
+        Toleraveis = 3,
+        Insignificantes = 4
     }
 
     public enum EnumCategoria
     {
-        Tecnologia = 0,
-        Equipe = 1,
-        Organizacionais = 2,
-        Ferramentas = 3,
-        Estimativa = 4
+        Tecnologia = 1,
+        Equipe = 2,
+        Organizacionais = 3,
+        Ferramentas = 4,
+        Estimativa = 5
     }
 
     public enum Status
     {
-        EmAndamento = 0,
-        Sanado = 1,
-        Mitigado = 2
+        EmAndamento = 1,
+        Sanado = 2,
+        Mitigado = 3
     }
 
     public enum EnumProbabilidadeOcorrencia
     {
-        Alta = 0,
-        Media = 1,
-        Baixa = 2
+        Alta = 1,
+        Media = 2,
+        Baixa = 3
     }
 }
