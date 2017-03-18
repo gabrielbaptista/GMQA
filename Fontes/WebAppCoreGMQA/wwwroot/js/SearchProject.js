@@ -7,7 +7,7 @@
             filtro: $("#filtro").val()
         },
         success: function (data) {
-            $('.table').html(data);
+            $('#example').DataTable();
         }
     });
 }

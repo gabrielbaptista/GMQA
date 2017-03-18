@@ -70,7 +70,7 @@ namespace WebAppCoreGMQA.Controllers
                 new SelectListItem {Value = "0", Text = Status.EmAndamento.ToString() },
                 new SelectListItem {Value = "1", Text = Status.Sanado.ToString() },
                 new SelectListItem {Value = "2", Text = Status.Mitigado.ToString() }
-   
+
             };
 
             ViewBag.ProbabilidadeOcorrencia = new List<SelectListItem>()
@@ -154,6 +154,18 @@ namespace WebAppCoreGMQA.Controllers
             _context.RiscoViewModel.Remove(riscoViewModel);
             _context.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public IActionResult SearchProject(string filtro)
+        {
+            var search = _context.RiscoViewModel.ToList();
+
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                search = _context.RiscoViewModel.Where(a => a.DescricaoRisco.Contains(filtro)).ToList();
+            }
+
+            return PartialView(search);
         }
     }
 }

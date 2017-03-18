@@ -1,44 +1,89 @@
 ﻿@model IEnumerable<WebAppCoreGMQA.ViewModels.Ciclo.CicloViewModel>
- @{ 
-     Layout = null;
- }
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DataInicio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataFim)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FaseCiclo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NumeroCiclo)
-        </th>
-        <th></th>
-    </tr>
+@{
+    Layout = null;
+}
 
-    @foreach (var item in Model)
-    {
+<table id="tableSearch" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataFim)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FaseCiclo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumeroCiclo)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdCiclos">Editar Ciclo</a> |
-                <a asp-action="Details" asp-route-id="@item.IdCiclos">Detalhe do Ciclo</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdCiclos">Deletar Ciclo</a>
-            </td>
+            <th>@Html.DisplayNameFor(model => model.DataInicio)</th>
+            <th>@Html.DisplayNameFor(model => model.DataFim)</th>
+            <th>@Html.DisplayNameFor(model => model.FaseCiclo)</th>
+            <th>@Html.DisplayNameFor(model => model.NumeroCiclo)</th>
+            <th></th>
         </tr>
-    }
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.DataInicio)</td>
+                <td>@Html.DisplayFor(modelItem => item.DataFim)</td>
+                <td>@Html.DisplayFor(modelItem => item.FaseCiclo)</td>
+                <td>@Html.DisplayFor(modelItem => item.NumeroCiclo)</td>
+                <td style="text-align:center">
+                    <a asp-action="Edit" asp-route-id="@item.IdCiclos" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+                    <a onclick="DeleteConfirme(@item.IdCiclos);" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
+
+<link href="~/lib/sweetalert/dist/sweetalert.css" rel="stylesheet" />
+<script src="~/lib/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        debugger
+        $('#tableSearch').DataTable(
+            {
+                "language": {
+                    "lengthMenu": "Itens _MENU_ por página",
+                    "zeroRecords": "Nada Encontrado",
+                    "info": "Mostrando página _PAGE_ de _PAGES_",
+                    "infoEmpty": "Nenhum registro encontrado",
+                    "infoFiltered": "(Filtrado de  _MAX_ registros no Total)",
+                    "search": "Pesquisa:"
+                }
+            }
+            );
+    });
+
+    function DeleteConfirme(id) {
+        swal({
+            title: "Você tem certeza?",
+            text: "Você tem certeza que deseja excluir esse arquivo?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Excluir!",
+            cancelButtonText: "Cancelar!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+
+        function (isConfirm) {
+            debugger
+            if (isConfirm) {                   
+                $.ajax(
+               {
+                   type: "POST",
+                   url: "/Ciclo/DeleteConfirmed",
+                   data: "id="+id,
+                   success: function(data){
+                       alert("");
+                   }
+               }
+       )
+            } else {
+                swal("Cancelado","", "error");
+            }
+        });
+    }
+</script>

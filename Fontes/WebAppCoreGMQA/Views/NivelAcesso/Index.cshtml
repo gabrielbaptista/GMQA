@@ -4,29 +4,25 @@
     ViewData["Title"] = "Nivel de Acesso";
 }
 
-<h2>@ViewData["Title"].</h2>
+<div class="row">
+    <div class="col-md-8 col-lg-8">
+        <h2>@ViewData["Title"]</h2>
+    </div><!-- /.col-lg-6 -->
+    <div class="col-md-4 col-lg-4">
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Search!</button>
+            </span>
+            <input id="filtro" onkeyup="SearchProject('@Url.Action("SearchProject")');" type="text" class="form-control" placeholder="Search for...">
+        </div>
+    </div>
+</div>
+
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DescricaoNivelAcesso)
-        </th>
-        <th></th>
-    </tr>
-    
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DescricaoNivelAcesso)
-        </td>
-        <td>
-            <a asp-action="Edit" asp-route-id="@item.IdNivelAcesso">Edit</a> |
-            <a asp-action="Details" asp-route-id="@item.IdNivelAcesso">Details</a> |
-            <a asp-action="Delete" asp-route-id="@item.IdNivelAcesso">Delete</a>
-        </td>
-    </tr>
-}
-</table>
+
+<div>
+    @Html.Partial("SearchProject")
+</div>

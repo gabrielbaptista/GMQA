@@ -41,13 +41,13 @@ namespace WebAppCoreGMQA.Controllers
         public IActionResult Create()
         {
             ViewBag.IdProjeto = _context.ProjetoViewModel.ToList();
+            ViewBag.IdEtapa = _context.EtapaViewModel.ToList();
 
             return View();
         }
 
         // POST: Ciclo/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Create(CicloViewModel cicloViewModel)
         {
             if (ModelState.IsValid)
@@ -108,14 +108,26 @@ namespace WebAppCoreGMQA.Controllers
         }
 
         // POST: Ciclo/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        [HttpPost, ActionName("DeleteConfirmed")]
         public IActionResult DeleteConfirmed(int id)
         {
             CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.IdCiclos == id);
             _context.CicloViewModel.Remove(cicloViewModel);
             _context.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public IActionResult SearchProject(string filtro)
+        {
+            var search = _context.CicloViewModel.ToList();
+
+            if (string.IsNullOrEmpty(filtro))
+            {
+                search = _context.CicloViewModel.Where(a => a.FaseCiclo.Contains(filtro)).ToList();
+
+            }
+
+            return PartialView(search);
         }
     }
 }

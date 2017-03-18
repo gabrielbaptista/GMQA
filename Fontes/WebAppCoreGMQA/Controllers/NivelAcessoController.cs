@@ -115,5 +115,17 @@ namespace WebAppCoreGMQA.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult SearchProject(string filtro)
+        {
+            var search = _context.NivelAcessoViewModel.ToList();
+
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                search = _context.NivelAcessoViewModel.Where(a => a.DescricaoNivelAcesso.Contains(filtro)).ToList();
+            }
+
+            return PartialView(search);
+        }
     }
 }
