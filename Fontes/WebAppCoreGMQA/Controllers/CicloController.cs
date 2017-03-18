@@ -72,6 +72,10 @@ namespace WebAppCoreGMQA.Controllers
             {
                 return NotFound();
             }
+
+            ViewBag.IdProjeto = _context.ProjetoViewModel.ToList();
+            ViewBag.IdEtapa = _context.EtapaViewModel.ToList();
+
             return View(cicloViewModel);
         }
 
@@ -108,7 +112,7 @@ namespace WebAppCoreGMQA.Controllers
         }
 
         // POST: Ciclo/Delete/5
-        [HttpPost, ActionName("DeleteConfirmed")]
+        [ActionName("DeleteConfirmed")]
         public IActionResult DeleteConfirmed(int id)
         {
             CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.IdCiclos == id);

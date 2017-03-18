@@ -40,7 +40,6 @@
 
 <script>
     $(document).ready(function () {
-        debugger
         $('#tableSearch').DataTable(
             {
                 "language": {
@@ -49,7 +48,8 @@
                     "info": "Mostrando página _PAGE_ de _PAGES_",
                     "infoEmpty": "Nenhum registro encontrado",
                     "infoFiltered": "(Filtrado de  _MAX_ registros no Total)",
-                    "search": "Pesquisa:"
+                    "search": "Pesquisa:",
+                    "Next":"Proximo"
                 }
             }
             );
@@ -60,30 +60,16 @@
             title: "Você tem certeza?",
             text: "Você tem certeza que deseja excluir esse arquivo?",
             type: "warning",
+            type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Excluir!",
-            cancelButtonText: "Cancelar!",
-            closeOnConfirm: false,
-            closeOnCancel: false
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false
         },
 
-        function (isConfirm) {
-            debugger
-            if (isConfirm) {                   
-                $.ajax(
-               {
-                   type: "POST",
-                   url: "/Ciclo/DeleteConfirmed",
-                   data: "id="+id,
-                   success: function(data){
-                       alert("");
-                   }
-               }
-       )
-            } else {
-                swal("Cancelado","", "error");
-            }
-        });
+       function () {
+           swal("Excluido!", "Item excluido com sucesso.", "success");
+           window.location.href = "@Url.Action("DeleteConfirmed", "Ciclo")" +"/"+ id ;
+       });
     }
 </script>
