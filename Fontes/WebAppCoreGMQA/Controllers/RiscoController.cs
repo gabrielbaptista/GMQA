@@ -110,6 +110,45 @@ namespace WebAppCoreGMQA.Controllers
             {
                 return NotFound();
             }
+
+            ViewBag.Ciclos = _context.CicloViewModel.ToList();
+            ViewBag.Projetos = _context.ProjetoViewModel.ToList();
+
+            var riscoEfeito = new List<SelectListItem>();
+
+            ViewBag.RiscoEfeito = new List<SelectListItem>()
+            {
+                new SelectListItem { Value = "1", Text = EnumRiscoEfeito.Catastroficos.ToString() },
+                new SelectListItem { Value = "2", Text = EnumRiscoEfeito.Serios.ToString() },
+                new SelectListItem { Value = "3", Text = EnumRiscoEfeito.Toleraveis.ToString() },
+                new SelectListItem { Value = "4", Text = EnumRiscoEfeito.Toleraveis.ToString() }
+
+            };
+
+            ViewBag.Categoria = new List<SelectListItem>()
+            {
+                new SelectListItem {Value = "1", Text = EnumCategoria.Tecnologia.ToString() },
+                new SelectListItem {Value = "2", Text = EnumCategoria.Equipe.ToString() },
+                new SelectListItem {Value = "3", Text = EnumCategoria.Organizacionais.ToString() },
+                new SelectListItem {Value = "4", Text = EnumCategoria.Ferramentas.ToString() },
+                new SelectListItem {Value = "5", Text = EnumCategoria.Estimativa.ToString() }
+            };
+
+            ViewBag.Status = new List<SelectListItem>()
+            {
+                new SelectListItem {Value = "1", Text = Status.EmAndamento.ToString() },
+                new SelectListItem {Value = "2", Text = Status.Sanado.ToString() },
+                new SelectListItem {Value = "3", Text = Status.Mitigado.ToString() }
+
+            };
+
+            ViewBag.ProbabilidadeOcorrencia = new List<SelectListItem>()
+            {
+                new SelectListItem {Value = "1", Text = EnumProbabilidadeOcorrencia.Alta.ToString() },
+                new SelectListItem {Value = "2", Text = EnumProbabilidadeOcorrencia.Media.ToString() },
+                new SelectListItem {Value = "3", Text = EnumProbabilidadeOcorrencia.Baixa.ToString() }
+            };
+
             return View(riscoViewModel);
         }
 
@@ -146,8 +185,7 @@ namespace WebAppCoreGMQA.Controllers
         }
 
         // POST: Risco/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        [ActionName("DeleteConfirmed")]
         public IActionResult DeleteConfirmed(int id)
         {
             RiscoViewModel riscoViewModel = _context.RiscoViewModel.Single(m => m.IdRisco == id);

@@ -136,6 +136,12 @@ namespace WebAppCoreGMQA.Controllers
         public IActionResult DeleteConfirmed(int id)
         {
             CicloViewModel cicloViewModel = _context.CicloViewModel.Single(m => m.IdCiclos == id);
+
+            var riscos = _context.RiscoViewModel.Where(a => a.IdCiclo == id).ToList();
+
+            if (riscos.Count() != 0)
+                _context.RiscoViewModel.RemoveRange(riscos);
+
             _context.CicloViewModel.Remove(cicloViewModel);
             _context.SaveChanges();
             return RedirectToAction("Index");

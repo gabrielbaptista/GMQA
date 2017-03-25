@@ -106,14 +106,22 @@ namespace WebAppCoreGMQA.Controllers
         }
 
         // POST: NivelAcessoViewModels/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        [ActionName("DeleteConfirmed")]
         public IActionResult DeleteConfirmed(int id)
         {
-            NivelAcessoViewModel nivelAcessoViewModel = _context.NivelAcessoViewModel.Single(m => m.IdNivelAcesso == id);
-            _context.NivelAcessoViewModel.Remove(nivelAcessoViewModel);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                NivelAcessoViewModel nivelAcessoViewModel = _context.NivelAcessoViewModel.Single(m => m.IdNivelAcesso == id);
+                _context.NivelAcessoViewModel.Remove(nivelAcessoViewModel);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (System.Exception)
+            {
+
+                return RedirectToAction("Index");
+            }
+           
         }
 
         public IActionResult SearchProject(string filtro)

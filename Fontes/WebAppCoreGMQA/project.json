@@ -27,8 +27,10 @@
   },
   "dependencies": {
     "bootstrap": "3.3.7",
+    "Facebook": "7.0.6",
     "jquery.datatables": "1.10.12",
     "Microsoft.ApplicationInsights.AspNetCore": "1.0.0",
+    "Microsoft.AspNetCore.Authentication.Facebook": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0",
     "Microsoft.AspNetCore.Hosting": "1.0.0",
@@ -47,6 +49,7 @@
     "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0",
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
+    "Microsoft.Owin.Security.Facebook": "3.0.1",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
     "PDQ.Framework.Web.CssIcons": "4.0.5500.30939"
   }

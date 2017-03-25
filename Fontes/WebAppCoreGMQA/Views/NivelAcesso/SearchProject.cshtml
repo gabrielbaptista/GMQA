@@ -2,25 +2,71 @@
  @{ 
      Layout = null;
  }
-   <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DescricaoNivelAcesso)
-        </th>
-        <th></th>
-    </tr>
 
-    @foreach (var item in Model)
-    {
+<table id="tableSearch" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DescricaoNivelAcesso)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdNivelAcesso">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdNivelAcesso">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdNivelAcesso">Delete</a>
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.DescricaoNivelAcesso)
+            </th>
+           
+            <th></th>
         </tr>
-    }
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.DescricaoNivelAcesso)</td>
+                
+                <td style="text-align:center">
+                    <a asp-action="Edit" asp-route-id="@item.IdNivelAcesso" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+                    <a onclick="DeleteConfirme(@item.IdNivelAcesso);" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
+
+<link href="~/lib/sweetalert/dist/sweetalert.css" rel="stylesheet" />
+<script src="~/lib/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#tableSearch').DataTable(
+            {
+                "language": {
+                    "lengthMenu": "Itens _MENU_ por página",
+                    "zeroRecords": "Nada Encontrado",
+                    "info": "Mostrando página _PAGE_ de _PAGES_",
+                    "infoEmpty": "Nenhum registro encontrado",
+                    "infoFiltered": "(Filtrado de  _MAX_ registros no Total)",
+                    "search": "Pesquisa:",
+                    "Next": "Proximo"
+                }
+            }
+            );
+    });
+
+    function DeleteConfirme(id) {
+        swal({
+            title: "Você tem certeza?",
+            text: "Você tem certeza que deseja excluir esse arquivo?",
+            type: "warning",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Sim, Delete esse Arquivo!",
+            closeOnConfirm: false
+        },
+
+       function () {
+           window.location.href = "@Url.Action("DeleteConfirmed", "NivelAcesso")" + "/" + id;
+       });
+    }
+</script>

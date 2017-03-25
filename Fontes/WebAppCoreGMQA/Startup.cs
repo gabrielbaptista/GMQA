@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Owin.Security.Facebook;
 
 namespace WebAppCoreGMQA
 {
@@ -41,6 +42,11 @@ namespace WebAppCoreGMQA
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
+            services.Configure<FacebookAuthenticationOptions>(options =>
+            {
+                options.AppId = Configuration["Authentication:Facebook:AppId"];
+                options.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+            });
 
             services.AddEntityFrameworkSqlServer();
 
@@ -66,6 +72,13 @@ namespace WebAppCoreGMQA
             loggerFactory.AddDebug();
 
             app.UseApplicationInsightsRequestTelemetry();
+
+            //app.UseFacebookAuthentication();
+            app.UseFacebookAuthentication(new FacebookOptions()
+            {
+                AppId = Configuration["Authentication:Facebook:AppId"],
+                AppSecret = Configuration["Authentication:Facebook:AppSecret"]
+            });
 
             if (env.IsDevelopment())
             {

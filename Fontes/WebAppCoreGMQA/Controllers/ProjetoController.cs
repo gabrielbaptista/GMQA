@@ -13,6 +13,7 @@ using WebAppCoreGMQA.ViewModels.Usuario;
 
 namespace WebAppCoreGMQA.Controllers
 {
+    [Identity]
     public class ProjetoController : Controller
     {
         private ApplicationDbContext _context;
@@ -96,47 +97,22 @@ namespace WebAppCoreGMQA.Controllers
         [ActionName("DeleteConfirmed")]
         public IActionResult DeleteConfirmed(int id)
         {
+            var projeto = _context.ProjetoViewModel.Where(a => a.IdProjeto == id).FirstOrDefault();
 
-            var projetos = from p in _context.ProjetoViewModel
-                           join c in _context.CicloViewModel on p.IdProjeto equals c.IdProjeto
-                           join r in _context.RiscoViewModel on p.IdProjeto equals r.IdProjeto
-                           where p.IdProjeto == id
+            var ciclos = _context.CicloViewModel.Where(a => a.IdProjeto == id).ToList();
 
-                           select new ProjetoViewModel();
+            var riscos = _context.RiscoViewModel.Where(a => a.IdProjeto == id).ToList();
 
-            var deleteProj = projetos.ToList();
+            if (riscos.Count() != 0)
+                _context.RiscoViewModel.RemoveRange(riscos);
 
-            if (deleteProj.Count() == 0)
-            {
-                _context.Remove(_context.ProjetoViewModel.Where(a => a.IdProjeto == id).FirstOrDefault());
-            }
+            if (ciclos.Count() != 0)
+                _context.CicloViewModel.RemoveRange(ciclos);      
 
-            var ciclos = from c in _context.CicloViewModel
-                         join p in _context.ProjetoViewModel on c.IdProjeto equals p.IdProjeto
-                         where p.IdProjeto == id
-
-                         select new CicloViewModel();
-
-            var riscos = from r in _context.RiscoViewModel
-                         join p in _context.ProjetoViewModel on r.IdProjeto equals p.IdProjeto
-                         where p.IdProjeto == id
-
-                         select new RiscoViewModel();
-
-            var deleteCiclo = ciclos.ToList();
-            
-            var deleteRisco = riscos.ToList();
-
-            if (deleteRisco.Count() != 0)
-                _context.RiscoViewModel.RemoveRange(deleteRisco);
-
-            if (deleteCiclo.Count != 0)
-                _context.CicloViewModel.RemoveRange(deleteCiclo);
-
-            if (deleteProj.Count != 0)
-                _context.ProjetoViewModel.RemoveRange(deleteProj);
+            _context.ProjetoViewModel.Remove(projeto);
 
             _context.SaveChanges();
+
             return RedirectToAction("Index");
         }
 
