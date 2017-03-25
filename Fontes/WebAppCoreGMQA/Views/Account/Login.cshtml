@@ -58,7 +58,7 @@
             <hr />
             @{
                 var loginProviders = SignInManager.GetExternalAuthenticationSchemes().ToList();
-                if (loginProviders.Count == 0)
+                if (loginProviders.Count > 0)
                 {
                     <div>
                         <p>

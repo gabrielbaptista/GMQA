@@ -13,7 +13,6 @@ using WebAppCoreGMQA.ViewModels.Usuario;
 
 namespace WebAppCoreGMQA.Controllers
 {
-    [Identity]
     public class ProjetoController : Controller
     {
         private ApplicationDbContext _context;
