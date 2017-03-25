@@ -1,10 +1,12 @@
 ﻿using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebAppCoreGMQA.Models;
 using WebAppCoreGMQA.ViewModels.Ciclo;
 
 namespace WebAppCoreGMQA.Controllers
 {
+    [Authorize]
     public class CicloController : Controller
     {
         private ApplicationDbContext _context;

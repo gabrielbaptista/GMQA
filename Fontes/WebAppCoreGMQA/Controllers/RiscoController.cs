@@ -7,6 +7,7 @@ using WebAppCoreGMQA.ViewModels.Risco;
 
 namespace WebAppCoreGMQA.Controllers
 {
+    [Authorize]
     public class RiscoController : Controller
     {
         private ApplicationDbContext _context;

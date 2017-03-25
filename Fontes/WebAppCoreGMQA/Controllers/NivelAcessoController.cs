@@ -1,10 +1,12 @@
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebAppCoreGMQA.Models;
 using WebAppCoreGMQA.ViewModels.NivelAcesso;
 
 namespace WebAppCoreGMQA.Controllers
 {
+    [Authorize]
     public class NivelAcessoController : Controller
     {
         private ApplicationDbContext _context;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebAppCoreGMQA.Models;
 using WebAppCoreGMQA.ViewModels.Ciclo;
@@ -13,6 +14,8 @@ using WebAppCoreGMQA.ViewModels.Usuario;
 
 namespace WebAppCoreGMQA.Controllers
 {
+
+    [Authorize]
     public class ProjetoController : Controller
     {
         private ApplicationDbContext _context;

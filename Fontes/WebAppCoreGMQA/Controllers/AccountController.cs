@@ -148,7 +148,7 @@ namespace WebAppCoreGMQA.Controllers
 
         //
         // GET: /Account/ExternalLoginCallback
-        [HttpGet]
+       // [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null)
         {
@@ -187,7 +187,7 @@ namespace WebAppCoreGMQA.Controllers
         // POST: /Account/ExternalLoginConfirmation
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
+      //  [ValidateAntiForgeryToken]
         public async Task<IActionResult> ExternalLoginConfirmation(ExternalLoginConfirmationViewModel model, string returnUrl = null)
         {
             if (_signInManager.IsSignedIn(User))
