@@ -46,5 +46,13 @@ namespace WebAppCoreGMQA.ViewModels.Ciclo
         [NotMapped]
         [Display(Name = "Etapa")]
         public string EtapaDesc { get; set; }
+
+        [NotMapped]
+        [Display(Name = "Métrica")]
+        public string Metricas { get; set; }
+
+        [NotMapped]
+        [Display(Name = "id Métrica")]
+        public string IdMetricas { get; set; }
     }
 }

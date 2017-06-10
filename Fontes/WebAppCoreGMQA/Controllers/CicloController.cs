@@ -65,6 +65,8 @@ namespace WebAppCoreGMQA.Controllers
             ViewBag.IdProjeto = _context.ProjetoViewModel.ToList();
             ViewBag.IdEtapa = _context.EtapaViewModel.ToList();
 
+            ViewBag.Metricas = _context.MetricaViewModel.ToList();
+
             return View();
         }
 

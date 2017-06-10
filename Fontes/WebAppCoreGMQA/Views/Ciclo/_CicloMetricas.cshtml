@@ -1,0 +1,65 @@
+﻿@model WebAppCoreGMQA.ViewModels.Ciclo.CicloViewModel
+@{
+    Layout = null;
+}
+
+<table id="tableSearch" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Métrica</th>
+            <th>Ativo</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>@Html.DropDownListFor(a => a.IdMetricas, new SelectList(ViewBag.Metricas, "IdMetrica", "DescricaoMetrica"), "Selecione", new { @class = "form-control" })</td>
+            @*<td>@Html.DisplayFor(modelItem => item.Ativo)</td>*@
+
+        </tr>
+
+    </tbody>
+</table>
+
+<link href="~/lib/sweetalert/dist/sweetalert.css" rel="stylesheet" />
+<script src="~/lib/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#tableSearch').DataTable(
+            {
+                "language": {
+                    "lengthMenu": "Itens _MENU_ por página",
+                    "zeroRecords": "Nada Encontrado",
+                    "info": "Mostrando página _PAGE_ de _PAGES_",
+                    "infoEmpty": "Nenhum registro encontrado",
+                    "infoFiltered": "(Filtrado de  _MAX_ registros no Total)",
+                    "search": "Pesquisa:",
+                    "Next": "Proximo"
+                }
+            }
+            );
+    });
+
+    function DeleteConfirme(id) {
+        swal({
+            title: "Você tem certeza?",
+            text: "Você tem certeza que deseja excluir esse arquivo?",
+            type: "warning",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false
+        },
+
+       function () {
+           window.location.href = "@Url.Action("DeleteConfirmed", "Ciclo")" + "/" + id;
+       });
+    }
+</script>
