@@ -1,0 +1,105 @@
+@model WebAppCoreGMQA.ViewModels.Ciclo.CicloViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h2>Create</h2>
+
+<form asp-action="Edit" id="Create">
+    <div class="form-horizontal">
+        <h4>CicloViewModel</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <input type="hidden" readonly asp-for="IdCiclos" class="form-control" />
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="DataInicio" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    <input type="date" asp-for="DataInicio" class="form-control" placeholder="DD/MM/YYYY" />
+                    <span asp-validation-for="DataInicio" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataFim" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    <input type="date" asp-for="DataFim" class="form-control" placeholder="DD/MM/YYYY" />
+                    <span asp-validation-for="DataFim" class="text-danger" />
+                </div>
+                <div class="col-md-3"></div>
+                <span id="erroData" style="padding-left:15px;" hidden class="text-danger col-md-9">Data fim é menor que data de inicio.</span>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FaseCiclo" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    <input asp-for="FaseCiclo" class="form-control" />
+                    <span asp-validation-for="FaseCiclo" class="text-danger" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="NumeroCiclo" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    <input asp-for="NumeroCiclo" class="form-control" />
+                    <span asp-validation-for="NumeroCiclo" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProjeto" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    @Html.DropDownListFor(a => a.IdProjeto, new SelectList(ViewBag.IdProjeto, "IdProjeto", "Nome"), "Selecione", new { @class = "form-control" })
+                    <span asp-validation-for="IdProjeto" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdEtapas" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    @Html.DropDownListFor(a => a.IdEtapas, new SelectList(ViewBag.IdEtapa, "IdEtapas", "Descricao"), "Selecione", new { @class = "form-control" })
+                    <span asp-validation-for="IdEtapas" class="text-danger" />
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-8">
+                <input type="button" onclick="validar()" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+        function validar() {
+            debugger;
+            var dataInicio = $('#DataInicio').val();
+            var dataFim = $('#DataFim').val();
+
+            if (dataInicio <= dataFim) {
+                $("#Create").submit();
+            }
+            else {
+                //alert("Data fim maior que data inicio");
+                $("#erroData").show();
+            }
+        }
+    </script>
+}

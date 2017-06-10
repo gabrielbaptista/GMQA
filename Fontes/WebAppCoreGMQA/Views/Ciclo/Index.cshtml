@@ -1,0 +1,19 @@
+@model IEnumerable<WebAppCoreGMQA.ViewModels.Ciclo.CicloViewModel>
+
+@{
+    ViewData["Title"] = "Ciclos";
+}
+<div class="row">
+    <div class="col-md-8 col-lg-8">
+        <h2>@ViewData["Title"]</h2>
+    </div><!-- /.col-lg-6 -->
+</div>
+
+<p>
+    <a asp-action="Create">Criar novo Ciclo</a>
+</p>
+
+<div id="table">
+    @Html.Partial("SearchProject")
+</div>
+
