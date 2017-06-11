@@ -112,6 +112,8 @@
     <Build Include="Tables\AspNetUserLogins.sql" />
     <Build Include="Tables\AspNetUserRoles.sql" />
     <Build Include="Tables\AspNetUsers.sql" />
+    <Build Include="Tables\Metricas.sql" />
+    <Build Include="Tables\Ciclo_Metrica.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SQLDatabaseProj.refactorlog" />
