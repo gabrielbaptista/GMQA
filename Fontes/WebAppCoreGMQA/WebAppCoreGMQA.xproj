@@ -17,6 +17,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
+    <ApplicationInsightsResourceId>/subscriptions/4b3b19d4-e804-46d1-b862-aa3ec6b85f61/resourcegroups/rgGMQA/providers/microsoft.insights/components/WebAppCoreGMQA</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/4b3b19d4-e804-46d1-b862-aa3ec6b85f61/resourcegroups/rgGMQA/providers/microsoft.insights/components/WebAppCoreGMQA</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet.Web\Microsoft.DotNet.Web.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>

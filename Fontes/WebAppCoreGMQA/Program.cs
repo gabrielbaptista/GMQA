@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using System.Diagnostics;
 
 namespace WebAppCoreGMQA
 {
@@ -11,14 +12,27 @@ namespace WebAppCoreGMQA
     {
         public static void Main(string[] args)
         {
-            var host = new WebHostBuilder()
-                .UseKestrel()
-                .UseUrls("http://*:5000")
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseStartup<Startup>()
-                .Build();
+            if (Debugger.IsAttached)
+            {
+                var host = new WebHostBuilder()
+                 .UseKestrel()
+                 .UseContentRoot(Directory.GetCurrentDirectory())
+                 .UseStartup<Startup>()
+                 .UseUrls("http://*:5000")
+                 .Build();
 
-            host.Run();
+                host.Run();
+            }
+            else
+            {
+                var host = new WebHostBuilder()
+                 .UseKestrel()
+                 .UseContentRoot(Directory.GetCurrentDirectory())
+                 .UseStartup<Startup>()
+                 .Build();
+
+                host.Run();
+            }
         }
     }
 }

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Owin;
 using Microsoft.Owin.Security.Facebook;
+using WebAppCoreGMQA.Services;
 
 namespace WebAppCoreGMQA
 {
@@ -23,9 +24,6 @@ namespace WebAppCoreGMQA
 
             if (env.IsDevelopment())
             {
-                // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
-                builder.AddUserSecrets();
-
                 // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
                 builder.AddApplicationInsightsSettings(developerMode: true);
             }
@@ -51,7 +49,7 @@ namespace WebAppCoreGMQA
             services.AddEntityFrameworkSqlServer();
 
             services.AddDbContext<ApplicationDbContext>(options =>
-               options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+               options.UseSqlServer(Constantes.CONEXAO_BANCO));
 
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
@@ -85,14 +83,6 @@ namespace WebAppCoreGMQA
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-
-
-                using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
-                    .CreateScope())
-                {
-                    serviceScope.ServiceProvider.GetService<ApplicationDbContext>()
-                         .Database.Migrate();
-                }
             }
 
 
