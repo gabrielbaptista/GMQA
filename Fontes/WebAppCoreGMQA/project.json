@@ -1,4 +1,6 @@
 {
+  "userSecretsId": "aspnet5-WebAppCoreGMQA-b10b4d17-8451-4759-89ff-6f709d03785d",
+
   "dependencies": {
     "bootstrap": "3.3.7",
     "Facebook": "7.0.6",
