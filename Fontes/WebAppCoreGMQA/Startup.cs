@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Owin;
 using Microsoft.Owin.Security.Facebook;
 using WebAppCoreGMQA.Services;
+using System.Diagnostics;
 
 namespace WebAppCoreGMQA
 {
@@ -48,8 +49,11 @@ namespace WebAppCoreGMQA
 
             services.AddEntityFrameworkSqlServer();
 
+            string conexaoBD = Constantes.CONEXAO_BANCO_LOCAL;
+            if (!Debugger.IsAttached)
+                conexaoBD = Constantes.CONEXAO_BANCO;
             services.AddDbContext<ApplicationDbContext>(options =>
-               options.UseSqlServer(Constantes.CONEXAO_BANCO));
+               options.UseSqlServer(conexaoBD));
 
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
