@@ -1,0 +1,42 @@
+@model WebAppCoreGMQA.ViewModels.Metrica.MetricaViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create" id="Create">
+    <div class="form-horizontal">
+        <h4>MetricaViewModel</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="DescricaoMetrica" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    <input asp-for="DescricaoMetrica" class="form-control" />
+                    <span asp-validation-for="DescricaoMetrica" class="text-danger" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-8">
+                <input id="create" type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+}

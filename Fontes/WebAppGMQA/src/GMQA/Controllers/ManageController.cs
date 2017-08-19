@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using GMQA.Models;
-using GMQA.Models.ManageViewModels;
-using GMQA.Services;
+using WebAppCoreGMQA.Models;
+using WebAppCoreGMQA.Services;
+using WebAppCoreGMQA.ViewModels.Manage;
 
-namespace GMQA.Controllers
+namespace WebAppCoreGMQA.Controllers
 {
     [Authorize]
     public class ManageController : Controller
@@ -50,10 +51,6 @@ namespace GMQA.Controllers
                 : "";
 
             var user = await GetCurrentUserAsync();
-            if (user == null)
-            {
-                return View("Error");
-            }
             var model = new IndexViewModel
             {
                 HasPassword = await _userManager.HasPasswordAsync(user),
@@ -104,10 +101,6 @@ namespace GMQA.Controllers
             }
             // Generate the token and send it
             var user = await GetCurrentUserAsync();
-            if (user == null)
-            {
-                return View("Error");
-            }
             var code = await _userManager.GenerateChangePhoneNumberTokenAsync(user, model.PhoneNumber);
             await _smsSender.SendSmsAsync(model.PhoneNumber, "Your security code is: " + code);
             return RedirectToAction(nameof(VerifyPhoneNumber), new { PhoneNumber = model.PhoneNumber });
@@ -150,12 +143,7 @@ namespace GMQA.Controllers
         [HttpGet]
         public async Task<IActionResult> VerifyPhoneNumber(string phoneNumber)
         {
-            var user = await GetCurrentUserAsync();
-            if (user == null)
-            {
-                return View("Error");
-            }
-            var code = await _userManager.GenerateChangePhoneNumberTokenAsync(user, phoneNumber);
+            var code = await _userManager.GenerateChangePhoneNumberTokenAsync(await GetCurrentUserAsync(), phoneNumber);
             // Send an SMS to verify the phone number
             return phoneNumber == null ? View("Error") : View(new VerifyPhoneNumberViewModel { PhoneNumber = phoneNumber });
         }
@@ -305,7 +293,7 @@ namespace GMQA.Controllers
             // Request a redirect to the external login provider to link a login for the current user
             var redirectUrl = Url.Action("LinkLoginCallback", "Manage");
             var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl, _userManager.GetUserId(User));
-            return Challenge(properties, provider);
+            return new ChallengeResult(provider, properties);
         }
 
         //
@@ -318,7 +306,7 @@ namespace GMQA.Controllers
             {
                 return View("Error");
             }
-            var info = await _signInManager.GetExternalLoginInfoAsync(await _userManager.GetUserIdAsync(user));
+            var info = await _signInManager.GetExternalLoginInfoAsync(_userManager.GetUserId(User));
             if (info == null)
             {
                 return RedirectToAction(nameof(ManageLogins), new { Message = ManageMessageId.Error });
@@ -350,9 +338,9 @@ namespace GMQA.Controllers
             Error
         }
 
-        private Task<ApplicationUser> GetCurrentUserAsync()
+        private async Task<ApplicationUser> GetCurrentUserAsync()
         {
-            return _userManager.GetUserAsync(HttpContext.User);
+            return await _userManager.FindByIdAsync(_userManager.GetUserId(User));
         }
 
         #endregion

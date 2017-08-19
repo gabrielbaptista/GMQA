@@ -1,68 +1,154 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - GMQA</title>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - GMQA</title>
 
-    <environment names="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment names="Staging,Production">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
-</head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">GMQA</a>
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+        <link href="~/css/jcarousel.css" rel="stylesheet" />
+        <link href="~/css/flexslider.css" rel="stylesheet" />
+        <link href="~/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+        <link href="~/css/style.css" rel="stylesheet" />
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+    </head>
+    <body>
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a asp-controller="Home" asp-action="Index"><img src="~/images/layout/gmqa_logo.png" alt="Logo GMQA" width="197" height="70" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+
+                        @await Html.PartialAsync("_LoginPartial")
+                        <ul class="nav navbar-nav">
+                            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li><a asp-controller="Home" asp-action="About">Sobre</a></li>
+                            <li><a asp-controller="Home" asp-action="Contact">Contato</a></li>
+                            <li><a asp-controller="Ciclo" asp-action="Index">Ciclos</a></li>
+                            <li><a asp-controller="Risco" asp-action="Index">Riscos</a></li>
+                            <li><a asp-controller="NivelAcesso" asp-action="Index">Níveis de Acesso</a></li>
+                            <li><a asp-controller="Projeto" asp-action="Index">Projeto</a></li>
+                            <li><a asp-controller="Metrica" asp-action="Index">Metricas</a></li>
+
+                        </ul>                  
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
-                @await Html.PartialAsync("_LoginPartial")
+            <hr />
+        </header>
+
+       
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="widget">
+                            <h5 class="widgetheading">Nossos Contatos</h5>
+                            <address>
+                                <strong>GMQA Systems</strong><br>
+                                São Paulo, SP<br>
+                                Brasil.
+                            </address>
+                            <p>
+                                <i class="icon-phone"></i> +55 11 1234-5678 <br>
+                                <i class="icon-envelope-alt"></i> gmqa@gmqa.com.br
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="widget">
+                            <h5 class="widgetheading">Links Rápidos</h5>
+                            <ul class="link-list">
+                                <li><a href="#">Últimos Eventos</a></li>
+                                <li><a href="#">Termos e Condições</a></li>
+                                <li><a href="#">Política de Privacidade</a></li>
+                                <li><a href="#">Carreira</a></li>
+                                <li><a href="#">Contato</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2017 - GMQA</p>
+            <div id="sub-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="copyright">
+                                <p>
+                                    <span>&copy; GMQA 2016 - Todos os direitos reservados.</span>
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="social-network">
+                                <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
-    </div>
+            @*<footer>
+        <p>&copy; 2016 - WebAppCoreGMQA</p>
+    </footer>
+            *@
+        </div>
+        <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+        <script src="~/js/jquery.js"></script>
+        <script src="~/js/jquery.easing.1.3.js"></script>
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="~/js/jquery.fancybox.pack.js"></script>
+        <script src="~/js/jquery.fancybox-media.js"></script>
+        <script src="~/js/portfolio/jquery.quicksand.js"></script>
+        <script src="~/js/portfolio/setting.js"></script>
+        <script src="~/js/jquery.flexslider.js"></script>
+        <script src="~/js/animate.js"></script>
+        <script src="~/js/custom.js"></script>
+        <script src="~/js/validator.min.js"></script>
+        <script type="text/javascript" src="~/js/SearchProject.js"></script>
+        <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+        @*@section Scripts{
+           
+            <script type="text/javascript" src="~/js/SearchProject.js"></script>
+        }*@
 
-    <environment names="Development">
+        @*<environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment names="Staging,Production">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery">
         </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+        *@
 
-    @RenderSection("scripts", required: false)
-</body>
+        @RenderSection("scripts", required: false)
+    </body>
 </html>

@@ -1,0 +1,104 @@
+@model WebAppCoreGMQA.ViewModels.Risco.RiscoViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>RiscoViewModel</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="IdRisco" />
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="DescricaoRisco" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    <input asp-for="DescricaoRisco" class="form-control" />
+                    <span asp-validation-for="DescricaoRisco" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProjeto" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    @Html.DropDownListFor(a => a.IdProjeto, new SelectList(ViewBag.Projetos, "IdProjeto", "Nome"), "Selecione", new { @class = "form-control" })
+                    <span asp-validation-for="IdProjeto" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCiclo" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    @Html.DropDownListFor(a => a.IdCiclo, new SelectList(ViewBag.Ciclos, "IdCiclos", "NumeroCiclo"), "Selecione", new { @class = "form-control" })
+                    <span asp-validation-for="IdCiclo" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Acao" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    <input asp-for="Acao" class="form-control" />
+                    <span asp-validation-for="Acao" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResponsavelAcao" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    <input asp-for="ResponsavelAcao" class="form-control" />
+                    <span asp-validation-for="ResponsavelAcao" class="text-danger" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="EfeitoOcorrencia" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    @Html.DropDownListFor(a => a.EfeitoOcorrencia, new SelectList(ViewBag.RiscoEfeito, "Value", "Text"), "Selecione", new { @class = "form-control" })
+                    <span asp-validation-for="EfeitoOcorrencia" class="text-danger" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Categoria" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    @Html.DropDownListFor(a => a.Categoria, new SelectList(ViewBag.Categoria, "Value", "Text"), "Selecione", new { @class = "form-control" })
+                    <span asp-validation-for="Categoria" class="text-danger" />
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Status" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    @Html.DropDownListFor(a => a.Status, new SelectList(ViewBag.Status, "Value", "Text"), "Selecione", new { @class = "form-control" })
+                    <span asp-validation-for="Status" class="text-danger" />
+                </div>
+
+            </div>
+            <div class="form-group">
+
+                <label asp-for="ProbabilidadeOcorrencia" class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                    @Html.DropDownListFor(a => a.ProbabilidadeOcorrencia, new SelectList(ViewBag.ProbabilidadeOcorrencia, "Value", "Text"), "Selecione", new { @class = "form-control" })
+                    <span asp-validation-for="ProbabilidadeOcorrencia" class="text-danger" />
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
