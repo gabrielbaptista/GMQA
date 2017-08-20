@@ -109,7 +109,7 @@ namespace WebAppCoreGMQA.Controllers
                 _context.RiscoViewModel.RemoveRange(riscos);
 
             if (ciclos.Count() != 0)
-                _context.CicloViewModel.RemoveRange(ciclos);      
+                _context.CicloViewModel.RemoveRange(ciclos);
 
             _context.ProjetoViewModel.Remove(projeto);
 
@@ -125,5 +125,29 @@ namespace WebAppCoreGMQA.Controllers
             return PartialView(search);
         }
 
+        public JsonResult RetornQntProd()
+        {
+            int aprovado = 0, andamento = 0, cancelado = 0, parado = 0;
+
+            var tdsProjeto = _context.ProjetoViewModel.ToList();
+
+            foreach (var item in tdsProjeto)
+            {
+                if (item.Status == "Aprovado")
+                    aprovado++;
+
+                else if (item.Status == "anda")
+                    andamento++;
+
+                else if (item.Status == "canc")
+                    cancelado++;
+
+                else
+                    parado++;
+
+            }
+
+            return Json(new { aprovado = aprovado, andamento = andamento, cancelado = cancelado, parado = parado });
+        }
     }
 }
