@@ -99,12 +99,6 @@
     <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\Usuarios.sql" />
-    <Build Include="Tables\Projetos.sql" />
-    <Build Include="Tables\Riscos.sql" />
-    <Build Include="Tables\NiveisAcesso.sql" />
-    <Build Include="Tables\Ciclos.sql" />
-    <Build Include="Tables\Etapas.sql" />
     <Build Include="Tables\__EFMigrationsHistory.sql" />
     <Build Include="Tables\AspNetRoleClaims.sql" />
     <Build Include="Tables\AspNetRoles.sql" />
@@ -112,10 +106,14 @@
     <Build Include="Tables\AspNetUserLogins.sql" />
     <Build Include="Tables\AspNetUserRoles.sql" />
     <Build Include="Tables\AspNetUsers.sql" />
-    <Build Include="Tables\Metricas.sql" />
     <Build Include="Tables\Ciclo_Metrica.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="SQLDatabaseProj.refactorlog" />
+    <Build Include="Tables\Ciclos.sql" />
+    <Build Include="Tables\Etapas.sql" />
+    <Build Include="Tables\Metricas.sql" />
+    <Build Include="Tables\NiveisAcesso.sql" />
+    <Build Include="Tables\Projetos.sql" />
+    <Build Include="Tables\Riscos.sql" />
+    <Build Include="Tables\Teste.sql" />
+    <Build Include="Tables\Usuarios.sql" />
   </ItemGroup>
 </Project>

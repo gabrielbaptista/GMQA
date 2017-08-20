@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using WebAppCoreGMQA;
+using System.Diagnostics;
 
 namespace GMQA
 {
@@ -11,14 +13,27 @@ namespace GMQA
     {
         public static void Main(string[] args)
         {
-            var host = new WebHostBuilder()
-                .UseKestrel()
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
-                .UseStartup<Startup>()
-                .Build();
+            if (Debugger.IsAttached)
+            {
+                var host = new WebHostBuilder()
+                 .UseKestrel()
+                 .UseContentRoot(Directory.GetCurrentDirectory())
+                 .UseStartup<Startup>()
+                 .UseUrls("http://*:5005")
+                 .Build();
 
-            host.Run();
+                host.Run();
+            }
+            else
+            {
+                var host = new WebHostBuilder()
+                 .UseKestrel()
+                 .UseContentRoot(Directory.GetCurrentDirectory())
+                 .UseStartup<Startup>()
+                 .Build();
+
+                host.Run();
+            }
         }
     }
 }

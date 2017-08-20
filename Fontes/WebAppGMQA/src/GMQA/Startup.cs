@@ -11,7 +11,7 @@ using Microsoft.Owin.Security.Facebook;
 using WebAppCoreGMQA.Services;
 using System.Diagnostics;
 
-namespace WebAppCoreGMQA
+namespace GMQA
 {
     public class Startup
     {
@@ -75,11 +75,11 @@ namespace WebAppCoreGMQA
 
 
             //app.UseFacebookAuthentication();
-            app.UseFacebookAuthentication(new FacebookOptions()
-            {
-                AppId = Configuration["Authentication:Facebook:AppId"],
-                AppSecret = Configuration["Authentication:Facebook:AppSecret"]
-            });
+            //app.UseFacebookAuthentication(new FacebookOptions()
+            //{
+            //    AppId = Configuration["Authentication:Facebook:AppId"],
+            //    AppSecret = Configuration["Authentication:Facebook:AppSecret"]
+            //});
 
             if (env.IsDevelopment())
             {
