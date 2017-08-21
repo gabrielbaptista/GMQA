@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Owin;
-using Microsoft.Owin.Security.Facebook;
 using WebAppCoreGMQA.Services;
 using System.Diagnostics;
 
@@ -44,12 +42,6 @@ namespace GMQA
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
-            services.Configure<FacebookAuthenticationOptions>(options =>
-            {
-                options.AppId = Configuration["Authentication:Facebook:AppId"];
-                options.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
-            });
-
             services.AddEntityFrameworkSqlServer();
 
             string conexaoBD = Constantes.CONEXAO_BANCO_LOCAL;
@@ -72,14 +64,6 @@ namespace GMQA
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
-
-            //app.UseFacebookAuthentication();
-            //app.UseFacebookAuthentication(new FacebookOptions()
-            //{
-            //    AppId = Configuration["Authentication:Facebook:AppId"],
-            //    AppSecret = Configuration["Authentication:Facebook:AppSecret"]
-            //});
 
             if (env.IsDevelopment())
             {

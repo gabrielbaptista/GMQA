@@ -3,9 +3,7 @@
 
   "dependencies": {
     "bootstrap": "3.3.7",
-    "Facebook": "7.0.6",
     "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
-    "microsoft.aspnetcore.authentication.facebook": "1.1.2",
     "Microsoft.AspNetCore.Authorization": "1.1.2",
     "microsoft.aspnetcore.diagnostics": "1.1.2",
     "microsoft.aspnetcore.diagnostics.entityframeworkcore": "1.1.2",
@@ -20,7 +18,6 @@
     "Microsoft.Extensions.Configuration.UserSecrets": "1.1.2",
     "Microsoft.Extensions.Logging.Console": "1.1.2",
     "Microsoft.Extensions.Logging.Debug": "1.1.2",
-    "Microsoft.Owin.Security.Facebook": "3.1.0",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.1.0",
     "PDQ.Framework.Web.CssIcons": "4.0.5500.30939"
   },
