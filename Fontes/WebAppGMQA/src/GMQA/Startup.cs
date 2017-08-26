@@ -40,23 +40,39 @@ namespace GMQA
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddApplicationInsightsTelemetry(Configuration);
+            //services.AddApplicationInsightsTelemetry(Configuration);
 
-            services.AddEntityFrameworkSqlServer();
+            //services.AddEntityFrameworkSqlServer();
+
+            //string conexaoBD = Constantes.CONEXAO_BANCO_LOCAL;
+            //if (!Debugger.IsAttached)
+            //    conexaoBD = Constantes.CONEXAO_BANCO;
+            //services.AddDbContext<ApplicationDbContext>(options =>
+            //   options.UseSqlServer(conexaoBD));
+
+
+            //services.AddIdentity<ApplicationUser, IdentityRole>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>()
+            //    .AddDefaultTokenProviders();
+
+            //services.AddMvc();
 
             string conexaoBD = Constantes.CONEXAO_BANCO_LOCAL;
             if (!Debugger.IsAttached)
                 conexaoBD = Constantes.CONEXAO_BANCO;
-            services.AddDbContext<ApplicationDbContext>(options =>
-               options.UseSqlServer(conexaoBD));
 
+            services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(conexaoBD));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
+                            .AddEntityFrameworkStores<ApplicationDbContext>()
+                            .AddDefaultTokenProviders();
 
             services.AddMvc();
 
+            // Add application services.
+            services.AddTransient<IEmailSender, AuthMessageSender>();
+            services.AddTransient<ISmsSender, AuthMessageSender>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -76,18 +92,17 @@ namespace GMQA
                 app.UseExceptionHandler("/Home/Error");
             }
 
-
             app.UseStaticFiles();
 
             app.UseIdentity();
 
-            // To configure external authentication please see http://go.microsoft.com/fwlink/?LinkID=532715
+            // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                name: "default",
+                template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

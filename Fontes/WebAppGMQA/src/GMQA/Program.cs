@@ -13,27 +13,14 @@ namespace GMQA
     {
         public static void Main(string[] args)
         {
-            if (Debugger.IsAttached)
-            {
-                var host = new WebHostBuilder()
-                 .UseKestrel()
-                 .UseContentRoot(Directory.GetCurrentDirectory())
-                 .UseStartup<Startup>()
-                 .UseUrls("http://*:5005")
-                 .Build();
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
+                .UseStartup<Startup>()
+                .Build();
 
-                host.Run();
-            }
-            else
-            {
-                var host = new WebHostBuilder()
-                 .UseKestrel()
-                 .UseContentRoot(Directory.GetCurrentDirectory())
-                 .UseStartup<Startup>()
-                 .Build();
-
-                host.Run();
-            }
+            host.Run();
         }
     }
 }
