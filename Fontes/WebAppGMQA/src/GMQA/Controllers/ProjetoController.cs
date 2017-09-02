@@ -9,6 +9,7 @@ using WebAppCoreGMQA.ViewModels.Ciclo;
 using WebAppCoreGMQA.ViewModels.Projeto;
 using WebAppCoreGMQA.ViewModels.Risco;
 using WebAppCoreGMQA.ViewModels.Usuario;
+using Microsoft.AspNetCore.Identity;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -18,22 +19,33 @@ namespace WebAppCoreGMQA.Controllers
     [Authorize]
     public class ProjetoController : Controller
     {
+        private readonly UserManager<ApplicationUser> _userManager;
         private ApplicationDbContext _context;
-        public ProjetoController(ApplicationDbContext context)
+        public ProjetoController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
+        }
+
+        public string GetIdUserLogado(string email)
+        {
+            var userId =_userManager.Users.Where(a => a.Email == email).FirstOrDefault();
+            return userId.Id;
         }
 
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var projetosLista = _context.ProjetoViewModel.ToList().OrderBy(a => a.DataInicio);
+            var idUserLogado = GetIdUserLogado(User.Identity.Name);
+            var projetosLista = _context.ProjetoViewModel.Where(a => a.IdUserAdmProjeto == idUserLogado || a.IdUserResponsavelProjeto == idUserLogado).ToList().OrderBy(a => a.DataInicio);
             return View(projetosLista);
         }
 
         public IActionResult Create()
         {
-            ViewBag.Usuarios = _context.UsuarioViewModel.ToList();
+            ViewBag.Usuarios = _userManager.Users.ToList();
+            ViewBag.IdUserAdmProjeto = _userManager.Users.Where(a => a.Email == User.Identity.Name).ToList();
+
             return View();
         }
 
@@ -44,10 +56,14 @@ namespace WebAppCoreGMQA.Controllers
             if (ModelState.IsValid)
             {
                 projetoViewModel.DataReal = DateTime.Now;
+               
                 _context.ProjetoViewModel.Add(projetoViewModel);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
+
+            ViewBag.Usuarios = _userManager.Users.ToList();
+            
             return View(projetoViewModel);
         }
 
@@ -59,7 +75,8 @@ namespace WebAppCoreGMQA.Controllers
             }
 
             ProjetoViewModel projetoViewModel = _context.ProjetoViewModel.SingleOrDefault(m => m.IdProjeto == id);
-            ViewBag.Usuarios = _context.UsuarioViewModel.ToList();
+            ViewBag.Usuarios = _userManager.Users.ToList();
+            ViewBag.IdUserAdmProjeto = _userManager.Users.Where(a => a.Email == User.Identity.Name).ToList();
 
             return View(projetoViewModel);
         }
@@ -128,8 +145,9 @@ namespace WebAppCoreGMQA.Controllers
         public JsonResult RetornQntProd()
         {
             int aprovado = 0, andamento = 0, cancelado = 0, parado = 0;
+            var idUserLogado = GetIdUserLogado(User.Identity.Name);
 
-            var tdsProjeto = _context.ProjetoViewModel.ToList();
+            var tdsProjeto = _context.ProjetoViewModel.Where(a => a.IdUserAdmProjeto == idUserLogado || a.IdUserResponsavelProjeto == idUserLogado).ToList().OrderBy(a => a.DataInicio);
 
             foreach (var item in tdsProjeto)
             {

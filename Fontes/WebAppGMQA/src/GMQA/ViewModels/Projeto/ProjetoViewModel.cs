@@ -43,12 +43,12 @@ namespace WebAppCoreGMQA.ViewModels.Projeto
         public DateTime DataReal { get; set; }
 
         [Required]
-        [Display(Name = "Id do usuário ")]
-        public int  IdUserResponsavelProjeto { get; set; }
+        [Display(Name = "Usuário Responsável")]
+        public string  IdUserResponsavelProjeto { get; set; }
 
         [Required]
-        [Display(Name = "Id do adm ")]
-        public int IdUserAdmProjeto { get; set; }
+        [Display(Name = "Usuário adm ")]
+        public string IdUserAdmProjeto { get; set; }
 
         [Required]
         [Display(Name = "Status")]

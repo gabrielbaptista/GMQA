@@ -51,14 +51,14 @@
             <div class="form-group">
                 <label asp-for="IdUserResponsavelProjeto" class="col-md-3 control-label"></label>
                 <div class="col-md-9">
-                    @Html.DropDownListFor(a => a.IdUserResponsavelProjeto, new SelectList(ViewBag.Usuarios, "IdUser", "Nome"), "Selecione", new { @class = "form-control" })
+                    @Html.DropDownListFor(a => a.IdUserResponsavelProjeto, new SelectList(ViewBag.Usuarios, "Id", "UserName"), "Selecione", new { @class = "form-control" })
                     <span asp-validation-for="IdUserResponsavelProjeto" class="text-danger" />
                 </div>
             </div>
             <div class="form-group">
                 <label asp-for="IdUserAdmProjeto" class="col-md-3 control-label"></label>
                 <div class="col-md-9">
-                    @Html.DropDownListFor(a => a.IdUserAdmProjeto, new SelectList(ViewBag.Usuarios, "IdUser", "Nome"), "Selecione", new { @class = "form-control" })
+                    @Html.DropDownListFor(a => a.IdUserAdmProjeto, new SelectList(ViewBag.IdUserAdmProjeto, "Id", "UserName"), new { @class = "form-control"})
                     <span asp-validation-for="IdUserAdmProjeto" class="text-danger" />
                 </div>
             </div>

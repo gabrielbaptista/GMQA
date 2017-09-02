@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using WebAppCoreGMQA.Models;
 using WebAppCoreGMQA.ViewModels.Risco;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebAppCoreGMQA.Controllers
 {
@@ -12,16 +13,47 @@ namespace WebAppCoreGMQA.Controllers
     public class RiscoController : Controller
     {
         private ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public RiscoController(ApplicationDbContext context)
+        public RiscoController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
+            _userManager = userManager;
             _context = context;
+        }
+
+        public string GetIdUserLogado(string email)
+        {
+            var userId = _userManager.Users.Where(a => a.Email == email).FirstOrDefault();
+            return userId.Id;
         }
 
         // GET: Risco
         public IActionResult Index()
         {
-            return View(_context.RiscoViewModel.ToList());
+
+            var risco = from r in _context.RiscoViewModel
+                         join p in _context.ProjetoViewModel on r.IdProjeto equals p.IdProjeto
+                         where p.IdUserAdmProjeto == GetIdUserLogado(User.Identity.Name) || p.IdUserResponsavelProjeto == GetIdUserLogado(User.Identity.Name)
+                         select new RiscoViewModel
+                         {
+                             IdRisco = r.IdRisco,
+                             IdCiclo = r.IdCiclo,
+                             IdProjeto = r.IdProjeto,
+                             Acao = r.Acao,
+                             Categoria = r.Categoria,
+                             ResponsavelAcao = r.ResponsavelAcao,
+                             DescricaoRisco = r.DescricaoRisco,
+                             Status = r.Status,
+                             EfeitoOcorrencia = r.EfeitoOcorrencia,
+                             ProbabilidadeOcorrencia = r.ProbabilidadeOcorrencia
+
+
+                         };
+
+            var riscoViewModel = risco.OrderBy(a => a.IdRisco).ToList();
+
+            return View(riscoViewModel);
+            //return View(_context.RiscoViewModel.ToList());
         }
 
         // GET: Risco/Details/5
@@ -45,7 +77,7 @@ namespace WebAppCoreGMQA.Controllers
         public IActionResult Create()
         {
             ViewBag.Ciclos = _context.CicloViewModel.ToList();
-            ViewBag.Projetos = _context.ProjetoViewModel.ToList();
+            ViewBag.Projetos = _context.ProjetoViewModel.Where(a => a.IdUserAdmProjeto == GetIdUserLogado(User.Identity.Name) || a.IdUserResponsavelProjeto == GetIdUserLogado(User.Identity.Name)).ToList();
 
             var riscoEfeito = new List<SelectListItem>();
 
@@ -114,7 +146,7 @@ namespace WebAppCoreGMQA.Controllers
             }
 
             ViewBag.Ciclos = _context.CicloViewModel.ToList();
-            ViewBag.Projetos = _context.ProjetoViewModel.ToList();
+            ViewBag.Projetos = _context.ProjetoViewModel.Where(a => a.IdUserAdmProjeto == GetIdUserLogado(User.Identity.Name) || a.IdUserResponsavelProjeto == GetIdUserLogado(User.Identity.Name)).ToList();
 
             var riscoEfeito = new List<SelectListItem>();
 

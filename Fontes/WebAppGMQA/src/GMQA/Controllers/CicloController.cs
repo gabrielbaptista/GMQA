@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebAppCoreGMQA.Models;
 using WebAppCoreGMQA.ViewModels.Ciclo;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebAppCoreGMQA.Controllers
 {
@@ -10,10 +11,18 @@ namespace WebAppCoreGMQA.Controllers
     public class CicloController : Controller
     {
         private ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public CicloController(ApplicationDbContext context)
+        public CicloController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
+            _userManager = userManager;
             _context = context;
+        }
+
+        public string GetIdUserLogado(string email)
+        {
+            var userId = _userManager.Users.Where(a => a.Email == email).FirstOrDefault();
+            return userId.Id;
         }
 
         // GET: Ciclo
@@ -23,6 +32,7 @@ namespace WebAppCoreGMQA.Controllers
             var ciclos = from c in _context.CicloViewModel
                          join p in _context.ProjetoViewModel on c.IdProjeto equals p.IdProjeto
                          join e in _context.EtapaViewModel on c.IdEtapas equals e.IdEtapas
+                         where p.IdUserAdmProjeto == GetIdUserLogado(User.Identity.Name) || p.IdUserResponsavelProjeto == GetIdUserLogado(User.Identity.Name)
                          select new CicloViewModel
                          {
                              DataFim = c.DataFim,
@@ -62,7 +72,7 @@ namespace WebAppCoreGMQA.Controllers
         // GET: Ciclo/Create
         public IActionResult Create()
         {
-            ViewBag.IdProjeto = _context.ProjetoViewModel.ToList();
+            ViewBag.IdProjeto = _context.ProjetoViewModel.Where(a => a.IdUserAdmProjeto == GetIdUserLogado(User.Identity.Name) || a.IdUserResponsavelProjeto == GetIdUserLogado(User.Identity.Name)).ToList();
             ViewBag.IdEtapa = _context.EtapaViewModel.ToList();
 
             ViewBag.Metricas = _context.MetricaViewModel.ToList();
@@ -97,7 +107,7 @@ namespace WebAppCoreGMQA.Controllers
                 return NotFound();
             }
 
-            ViewBag.IdProjeto = _context.ProjetoViewModel.ToList();
+            ViewBag.IdProjeto = _context.ProjetoViewModel.Where(a => a.IdUserAdmProjeto == GetIdUserLogado(User.Identity.Name) || a.IdUserResponsavelProjeto == GetIdUserLogado(User.Identity.Name)).ToList();
             ViewBag.IdEtapa = _context.EtapaViewModel.ToList();
 
             return View(cicloViewModel);
