@@ -6,23 +6,25 @@
 <table id="tableSearch" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
         <tr>
+            <th></th>
             <th>
                 @Html.DisplayNameFor(model => model.DescricaoMetrica)
             </th>
-            <th></th>
+           
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                <td>@Html.DisplayFor(modelItem => item.DescricaoMetrica)</td>
-            
                 <td style="text-align:center">
                     <a asp-action="Edit" asp-route-id="@item.IdMetrica" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
                     <a onclick="DeleteConfirme(@item.IdMetrica);" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
 
                 </td>
+                <td>@Html.DisplayFor(modelItem => item.DescricaoMetrica)</td>
+            
+            
             </tr>
         }
     </tbody>

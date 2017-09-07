@@ -15,56 +15,56 @@
 
         <div class="col-md-6">
             <div class="form-group">
-                <label asp-for="Nome" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="Nome" class="col-xs-12 col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     <input asp-for="Nome" class="form-control" />
                     <span asp-validation-for="Nome" class="text-danger" />
                 </div>
             </div>
             <div class="form-group">
-                <label asp-for="ClienteProjeto" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="ClienteProjeto" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     <input asp-for="ClienteProjeto" class="form-control" />
                     <span asp-validation-for="ClienteProjeto" class="text-danger" />
                 </div>
             </div>
             <div class="form-group">
-                <label asp-for="DataInicio" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="DataInicio" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     <input type="date"  asp-for="DataInicio" class="form-control" />
                     <span id="DataInicio" asp-validation-for="DataInicio" class="text-danger" />
                 </div>
             </div>
             <div class="form-group">
-                <label  asp-for="DataFim" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label  asp-for="DataFim" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     <input type="date"  asp-for="DataFim" class="form-control" />
                     <span id="DataFim" asp-validation-for="DataFim" class="text-danger" />
 
                 </div>
-                <div class="col-md-3"></div>
-                <span id="erroData" style="padding-left:15px;" hidden class="text-danger col-md-9">Data fim é menor que data de inicio.</span>
+                <div class="col-xs-12 col-md-3"></div>
+                <span id="erroData" style="padding-left:15px;" hidden class="text-danger col-xs-12 col-md-9">Data fim é menor que data de inicio.</span>
 
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label asp-for="IdUserResponsavelProjeto" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="IdUserResponsavelProjeto" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     @Html.DropDownListFor(a => a.IdUserResponsavelProjeto, new SelectList(ViewBag.Usuarios, "Id", "UserName"), "Selecione", new { @class = "form-control" })
                     <span asp-validation-for="IdUserResponsavelProjeto" class="text-danger" />
                 </div>
             </div>
             <div class="form-group">
-                <label asp-for="IdUserAdmProjeto" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="IdUserAdmProjeto" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     @Html.DropDownListFor(a => a.IdUserAdmProjeto, new SelectList(ViewBag.IdUserAdmProjeto, "Id", "UserName"), new { @class = "form-control"})
                     <span asp-validation-for="IdUserAdmProjeto" class="text-danger" />
                 </div>
             </div>
             <div class="form-group">
-                <label asp-for="Status" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="Status" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     <select asp-for="Status" name="Status" id="Status" class="form-control">
                         <option value="anda">Em andamento</option>
                         <option value="canc">Cancelado</option>

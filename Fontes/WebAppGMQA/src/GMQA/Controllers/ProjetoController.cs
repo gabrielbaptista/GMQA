@@ -151,7 +151,7 @@ namespace WebAppCoreGMQA.Controllers
 
             foreach (var item in tdsProjeto)
             {
-                if (item.Status == "Aprovado")
+                if (item.Status == "apro")
                     aprovado++;
 
                 else if (item.Status == "anda")

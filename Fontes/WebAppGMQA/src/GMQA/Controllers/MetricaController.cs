@@ -16,6 +16,7 @@ using WebAppCoreGMQA.ViewModels.Usuario;
 namespace WebAppCoreGMQA.Controllers
 {
 
+    [Authorize]
     public class MetricaController : Controller
     {
         private ApplicationDbContext _context;

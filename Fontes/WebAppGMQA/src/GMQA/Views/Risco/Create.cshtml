@@ -14,36 +14,36 @@
 
         <div class="col-md-6">
             <div class="form-group">
-                <label asp-for="DescricaoRisco" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="DescricaoRisco" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     <input asp-for="DescricaoRisco" class="form-control" />
                     <span asp-validation-for="DescricaoRisco" class="text-danger" />
                 </div>
             </div>
             <div class="form-group">
-                <label asp-for="IdProjeto" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="IdProjeto" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     @Html.DropDownListFor(a => a.IdProjeto, new SelectList(ViewBag.Projetos, "IdProjeto", "Nome"), "Selecione", new { @class = "form-control" })
                     <span asp-validation-for="IdProjeto" class="text-danger" />
                 </div>
             </div>
             <div class="form-group">
-                <label asp-for="IdCiclo" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="IdCiclo" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     @Html.DropDownListFor(a => a.IdCiclo, new SelectList(ViewBag.Ciclos, "IdCiclos", "NumeroCiclo"), "Selecione", new { @class = "form-control" })
                     <span asp-validation-for="IdCiclo" class="text-danger" />
                 </div>
             </div>
             <div class="form-group">
-                <label asp-for="Acao" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="Acao" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     <input asp-for="Acao" class="form-control"  />
                     <span asp-validation-for="Acao" class="text-danger" />
                 </div>
             </div>
             <div class="form-group">
-                <label asp-for="ResponsavelAcao" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="ResponsavelAcao" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     <input asp-for="ResponsavelAcao" class="form-control" />
                     <span asp-validation-for="ResponsavelAcao" class="text-danger" />
                 </div>
@@ -52,16 +52,16 @@
 
         <div class="col-md-6">
             <div class="form-group">
-                <label asp-for="EfeitoOcorrencia" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="EfeitoOcorrencia" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     @Html.DropDownListFor(a => a.EfeitoOcorrencia, new SelectList(ViewBag.RiscoEfeito, "Value", "Text"), "Selecione", new { @class = "form-control" })
                     <span asp-validation-for="EfeitoOcorrencia" class="text-danger" />
                 </div>
             </div>
 
             <div class="form-group">
-                <label asp-for="Categoria" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="Categoria" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     @Html.DropDownListFor(a => a.Categoria, new SelectList(ViewBag.Categoria, "Value", "Text"), "Selecione", new { @class = "form-control" })
                     <span asp-validation-for="Categoria" class="text-danger" />
                 </div>
@@ -69,8 +69,8 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="Status" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="Status" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     @Html.DropDownListFor(a => a.Status, new SelectList(ViewBag.Status, "Value", "Text"), "Selecione", new { @class = "form-control" })
                     <span asp-validation-for="Status" class="text-danger" />
                 </div>
@@ -78,8 +78,8 @@
             </div>
             <div class="form-group">
 
-                <label asp-for="ProbabilidadeOcorrencia" class="col-md-3 control-label"></label>
-                <div class="col-md-9">
+                <label asp-for="ProbabilidadeOcorrencia" class="col-xs-12 col-md-3 control-label"></label>
+                <div class="col-xs-12 col-md-9">
                     @Html.DropDownListFor(a => a.ProbabilidadeOcorrencia, new SelectList(ViewBag.ProbabilidadeOcorrencia, "Value", "Text"), "Selecione", new { @class = "form-control" })
                     <span asp-validation-for="ProbabilidadeOcorrencia" class="text-danger" />
                 </div>

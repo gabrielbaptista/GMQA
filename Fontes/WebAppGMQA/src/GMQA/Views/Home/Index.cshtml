@@ -2,73 +2,78 @@
     ViewData["Title"] = "Home Page";
 }
 
-<!-- Slider -->
-<div class="col-md-6 col-sm-6 col-xs-12">
-    <div class="x_panel">
-        <div class="x_title">
-            <h2>Projetos</h2>
-            <ul class="nav navbar-right panel_toolbox">
-                <li>
-                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="#">Settings 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Settings 2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="close-link"><i class="fa fa-close"></i></a>
-                </li>
-            </ul>
-            <div class="clearfix"></div>
-        </div>
-        <div class="x_content">
-            <div id="donut-example" style="height:200px;"></div>
+
+@inject SignInManager<ApplicationUser> SignInManager
+@if (SignInManager.IsSignedIn(User))
+{
+    <!-- Slider -->
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Projetos</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#">Settings 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div id="donut-example" style="height:200px;"></div>
+            </div>
         </div>
     </div>
-</div>
 
 
-<div class="col-md-6 col-sm-6 col-xs-12">
-    <div class="x_panel">
-        <div class="x_title">
-            <h2>Projetos</h2>
-            <ul class="nav navbar-right panel_toolbox">
-                <li>
-                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="#">Settings 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Settings 2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="close-link"><i class="fa fa-close"></i></a>
-                </li>
-            </ul>
-            <div class="clearfix"></div>
-        </div>
-        <div class="x_content">
-            <div id="area-example" style="height:200px;"></div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Projetos</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#">Settings 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div id="area-example" style="height:200px;"></div>
+            </div>
         </div>
     </div>
-</div>
+}
+<div class="col-md-12 col-sm-12 col-xs-12" >
+    <div class="x_panel">
+        <div class="x_title">
 
-<div class="row">
-    <div class="col-md-12">
- 
             <div id="main-slider" class="flexslider">
                 <ul class="slides">
                     <li>
@@ -91,26 +96,34 @@
                 </ul>
             </div>
 
+        </div>
     </div>
 </div>
+
 <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 <script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
 
 <script>
     $(function () {
-        DashBoard();
+        debugger
+        var i = 0;
+        DashBoard(i);
+        $('.flexslider').flexslider({
+            animation: 'slide'
+        });
+
     });
 
 
-    function DashBoard() {
-        debugger
+    function DashBoard(i) {
+        
         $.ajax({
             type: "POST",
             url: "/Projeto/RetornQntProd",
             success: function (retorno) {
                 //valorGrafico = retorno.retorno;
-                Morris.Donut({
+                var morrisDonut = Morris.Donut({
                     element: 'donut-example',
                     colors: ['#FFA500', '#0000FF', '#FF0000	', '#778899'],
                     data: [
@@ -121,12 +134,28 @@
                     ],
 
                 });
-
-                select(1)
+                debugger
+                morrisDonut.select(i)
             }
         });
+
+        if(i < 3 ){
+
+            i++;
+        } else {
+            i = 0;
+
+        }
+        
+
+        window.setTimeout(function () {
+         
+            DashBoard(i);
+          
+        }, 7000);
+
     }
-    //window.setTimeout('DashBoard()', 3000);
+    //
 
     Morris.Area({
         element: 'area-example',

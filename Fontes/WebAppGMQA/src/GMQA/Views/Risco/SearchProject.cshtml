@@ -5,54 +5,63 @@
 <table id="tableSearch" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
         <tr>
+            <th></th>
             <th>
                 @Html.DisplayNameFor(model => model.DescricaoRisco)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ResponsavelAcao)
             </th>
-            <th></th>
+            
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                <td>@Html.DisplayFor(modelItem => item.DescricaoRisco)</td>
-                <td>@Html.DisplayFor(modelItem => item.ResponsavelAcao)</td>
                 <td style="text-align:center">
                     <a asp-action="Edit" asp-route-id="@item.IdRisco" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
                     <a onclick="DeleteConfirme(@item.IdRisco);" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
 
                 </td>
+                <td>@Html.DisplayFor(modelItem => item.DescricaoRisco)</td>
+                <td>@Html.DisplayFor(modelItem => item.ResponsavelAcao)</td>
+             
             </tr>
         }
     </tbody>
 </table>
 
-     <link href="~/lib/sweetalert/dist/sweetalert.css" rel="stylesheet" />
-<script src="~/lib/sweetalert/dist/sweetalert.min.js"></script>
 
-<script src="~/lib/jquery/dist/jquery.js"></script>
 <link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="//cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" />
+<link href="~/lib/sweetalert/dist/sweetalert.css" rel="stylesheet" />
+
+<script src="~/lib/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+<script src="//cdn.datatables.net/responsive/2.1.1/js/responsive.bootstrap.min.js"></script>
 
 <script>
-    $(document).ready(function () {
-        $('#tableSearch').DataTable(
-            {
-                "language": {
-                    "lengthMenu": "Itens _MENU_ por página",
-                    "zeroRecords": "Nada Encontrado",
-                    "info": "Mostrando página _PAGE_ de _PAGES_",
-                    "infoEmpty": "Nenhum registro encontrado",
-                    "infoFiltered": "(Filtrado de  _MAX_ registros no Total)",
-                    "search": "Pesquisa:",
-                    "Next": "Proximo"
-                }
+    $('#tableSearch').DataTable(
+        {
+            responsive: true,
+            "language": {
+                "lengthMenu": "Itens _MENU_ por página",
+                "zeroRecords": "Nada Encontrado",
+                "info": "Mostrando página _PAGE_ de _PAGES_",
+                "infoEmpty": "Nenhum registro encontrado",
+                "infoFiltered": "(Filtrado de  _MAX_ registros no Total)",
+                "search": "Pesquisa:",
+                "Next": "Proximo"
             }
-            );
-    });
+        }
+        );
 
     function DeleteConfirme(id) {
         swal({
