@@ -30,7 +30,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a id="menu_toggle" style="cursor:pointer"><img src="~/images/layout/gmqa_logo.png" alt="Logo GMQA" width="197" height="70" /></a>
+                        <a id="menu_toggle1" style="cursor:pointer"><img src="~/images/layout/gmqa_logo.png" alt="Logo GMQA" width="197" height="70" /></a>
                        
                     </div>
                     <div class="clearfix"></div>
@@ -150,6 +150,28 @@
             <!-- /footer content -->
         </div>
     </div>
+
+    <script>
+        $("#menu_toggle1").on('click', function () {
+            console.log('clicked - menu toggle');
+
+            if ($BODY.hasClass('nav-md')) {
+                $SIDEBAR_MENU.find('li.active ul').hide();
+                $SIDEBAR_MENU.find('li.active').addClass('active-sm').removeClass('active');
+            } else {
+                $SIDEBAR_MENU.find('li.active-sm ul').show();
+                $SIDEBAR_MENU.find('li.active-sm').addClass('active').removeClass('active-sm');
+            }
+
+            $BODY.toggleClass('nav-md nav-sm');
+
+            setContentHeight();
+
+            $('.dataTable').each(function () { $(this).dataTable().fnDraw(); });
+        });
+
+    </script>
+
     <!-- jQuery -->
     <script src="~/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
